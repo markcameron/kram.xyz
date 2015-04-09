@@ -18,6 +18,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     '/assets/vendor/adminlte/bootstrap/css/bootstrap.min.css',
     '/assets/vendor/adminlte/dist/css/AdminLTE.min.css',
     '/assets/vendor/adminlte/dist/css/skins/skin-purple.min.css',
+    '/assets/vendor/adminlte/plugins/datepicker/datepicker3.css',
     )) !!}
 
 
@@ -174,6 +175,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     '/assets/vendor/adminlte/plugins/jQuery/jQuery-2.1.3.min.js',
     '/assets/vendor/adminlte/bootstrap/js/bootstrap.min.js',
     '/assets/vendor/adminlte/dist/js/app.min.js',
+    '/assets/vendor/adminlte/plugins/datepicker/bootstrap-datepicker.js',
+    '/assets/custom/js/adminlte.js',
     )) !!}
 
     <!-- jQuery 2.1.3 -->
