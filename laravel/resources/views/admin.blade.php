@@ -19,6 +19,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     '/assets/vendor/adminlte/dist/css/AdminLTE.min.css',
     '/assets/vendor/adminlte/dist/css/skins/skin-purple.min.css',
     '/assets/vendor/adminlte/plugins/datepicker/datepicker3.css',
+    '/assets/custom/css/admin/macro-multi-upload.css',
     )) !!}
 
 
@@ -176,6 +177,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     '/assets/vendor/adminlte/bootstrap/js/bootstrap.min.js',
     '/assets/vendor/adminlte/dist/js/app.min.js',
     '/assets/vendor/adminlte/plugins/datepicker/bootstrap-datepicker.js',
+    '/assets/vendor/js/dropzone.min.js',
     '/assets/custom/js/adminlte.js',
     )) !!}
 
@@ -186,5 +188,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Optionally, you can add Slimscroll and FastClick plugins.
     Both of these plugins are recommended to enhance the
     user experience -->
+
+    @yield('js')
+
   </body>
 </html>

@@ -14,6 +14,7 @@ class MacroServiceProvider extends HtmlServiceProvider {
 
     // Load macros
     require base_path() . '/resources/macros/adminlte.php';
+    require base_path() . '/resources/macros/image_upload.php';
   }
 
 }

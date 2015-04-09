@@ -144,13 +144,17 @@ return [
 		'App\Providers\ConfigServiceProvider',
 		'App\Providers\EventServiceProvider',
 		'App\Providers\RouteServiceProvider',
-    'App\Providers\MacroServiceProvider',
 
    /*
     * Custom Service Providers
     */
     'Devfactory\Minify\MinifyServiceProvider',
     'Illuminate\Html\HtmlServiceProvider',
+    'Devfactory\Media\MediaServiceProvider',
+    'That0n3guy\Transliteration\TransliterationServiceProvider',
+
+    // Leave it after HtmlServiceProvider !!!
+    'App\Providers\MacroServiceProvider',
 	],
 
 	/*

@@ -6,10 +6,14 @@
 
     <div class="col-md-6">
 
-      <div class="box box-primary">
+      <div class="box box-primary box-solid collapsed-box">
 
         <div class="box-header">
           <h3 class="box-title">Text field</h3>
+
+          <div class="box-tools pull-right">
+            <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>
+          </div>
         </div>
 
         <div class="box-body">
@@ -29,17 +33,15 @@
         </div>
 
       </div>
-    </div>
-  </div>
 
-  <div class="row">
-
-    <div class="col-md-6">
-
-      <div class="box box-primary">
+      <div class="box box-primary box-solid collapsed-box">
 
         <div class="box-header">
           <h3 class="box-title">Textarea field</h3>
+
+          <div class="box-tools pull-right">
+            <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>
+          </div>
         </div>
 
         <div class="box-body">
@@ -59,17 +61,15 @@
         </div>
 
       </div>
-    </div>
-  </div>
 
-  <div class="row">
-
-    <div class="col-md-6">
-
-      <div class="box box-primary">
+      <div class="box box-primary box-solid collapsed-box">
 
         <div class="box-header">
           <h3 class="box-title">Select field</h3>
+
+          <div class="box-tools pull-right">
+            <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>
+          </div>
         </div>
 
         <div class="box-body">
@@ -89,17 +89,15 @@
         </div>
 
       </div>
-    </div>
-  </div>
 
-  <div class="row">
-
-    <div class="col-md-6">
-
-      <div class="box box-primary">
+      <div class="box box-primary box-solid collapsed-box">
 
         <div class="box-header">
           <h3 class="box-title">Select field</h3>
+
+          <div class="box-tools pull-right">
+            <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>
+          </div>
         </div>
 
         <div class="box-body">
@@ -120,6 +118,66 @@
 
       </div>
     </div>
+
+    <div class="col-md-6">
+
+      <div class="box box-success box-solid collapsed-box">
+
+        <div class="box-header">
+          <h3 class="box-title">Single Image Uploads</h3>
+
+          <div class="box-tools pull-right">
+            <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="box-body">
+          <code>
+            Form::singleUpload($name, $label, $model, $type)
+          </code>
+          <br>
+          <h4>Example</h4>
+          <code>
+            &#123;!! Form::singleUpload('name', trans('upload.label'), $user, 'profile_picture') !!&#125;
+          </code>
+          <br>
+          <br>
+
+          {!! Form::singleUpload('name', trans('upload.label'), NULL, 'profile_picture') !!}
+
+        </div>
+
+      </div>
+
+      <div class="box box-success box-solid collapsed-box">
+
+        <div class="box-header">
+          <h3 class="box-title">Multiple Image Uploads</h3>
+
+          <div class="box-tools pull-right">
+            <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="box-body">
+          <code>
+            Form::multiUpload($model, $type)
+          </code>
+          <br>
+          <h4>Example</h4>
+          <code>
+            &#123;!! Form::multiUpload($user, 'profile_picture') !!&#125;
+          </code>
+          <br>
+          <br>
+
+          {!! Form::multiUpload($user, 'profile_picture') !!}
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 
 @endsection
