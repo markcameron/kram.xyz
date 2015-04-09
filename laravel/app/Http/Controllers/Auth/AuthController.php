@@ -20,6 +20,8 @@ class AuthController extends Controller {
 
 	use AuthenticatesAndRegistersUsers;
 
+  protected $redirectPath;
+
 	/**
 	 * Create a new authentication controller instance.
 	 *
@@ -31,6 +33,7 @@ class AuthController extends Controller {
 	{
 		$this->auth = $auth;
 		$this->registrar = $registrar;
+    $this->redirectPath = 'auth/login';
 
 		$this->middleware('guest', ['except' => 'getLogout']);
 	}

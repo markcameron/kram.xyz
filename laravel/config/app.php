@@ -148,6 +148,7 @@ return [
    /*
     * Custom Service Providers
     */
+    'Devfactory\Minify\MinifyServiceProvider',
     'Illuminate\Html\HtmlServiceProvider',
 	],
 
@@ -198,9 +199,9 @@ return [
 		'View'      => 'Illuminate\Support\Facades\View',
 
     // Custom/Vendor
-    'Form'=> 'Illuminate\Html\FormFacade',
-    'HTML'=> 'Illuminate\Html\HtmlFacade',
-
+    'Minify'    => 'Devfactory\Minify\Facades\MinifyFacade',
+    'Form'      => 'Illuminate\Html\FormFacade',
+    'HTML'      => 'Illuminate\Html\HtmlFacade',
 	],
 
 ];
