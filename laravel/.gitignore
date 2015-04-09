@@ -1,3 +1,9 @@
 /vendor
 /node_modules
 .env
+composer.lock
+.DS_Store
+Thumbs.db
+public/builds
+public/uploads
+public/files
