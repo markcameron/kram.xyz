@@ -34,4 +34,9 @@ return [
 		'secret' => '',
 	],
 
+  'rollbar' => array(
+    'access_token' => '3f0266077c8241d9a97a606bb5205d4e',
+    'level' => 'error'
+  ),
+
 ];

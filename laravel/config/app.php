@@ -153,6 +153,7 @@ return [
     'Devfactory\Minify\MinifyServiceProvider',
     'Devfactory\Variables\VariablesServiceProvider',
     'That0n3guy\Transliteration\TransliterationServiceProvider',
+    'Jenssegers\Rollbar\RollbarServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
