@@ -35,7 +35,7 @@ return [
 	],
 
   'rollbar' => array(
-    'access_token' => '3f0266077c8241d9a97a606bb5205d4e',
+    'access_token' => getenv('SERVICE_ROLLBAR_TOKEN') ?: '3f0266077c8241d9a97a606bb5205d4e',
     'level' => 'error'
   ),
 
