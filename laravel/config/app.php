@@ -154,6 +154,7 @@ return [
     'Devfactory\Variables\VariablesServiceProvider',
     'That0n3guy\Transliteration\TransliterationServiceProvider',
     'Jenssegers\Rollbar\RollbarServiceProvider',
+    'Menu\MenuServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
@@ -210,6 +211,7 @@ return [
     'Variables' => 'Devfactory\Variables\Facades\VariablesFacade',
     'Form'      => 'Illuminate\Html\FormFacade',
     'HTML'      => 'Illuminate\Html\HtmlFacade',
+    'Menu'      => 'Menu\Menu',
 	],
 
 ];
