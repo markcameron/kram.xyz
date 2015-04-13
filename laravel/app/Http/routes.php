@@ -24,3 +24,11 @@ Route::get('admin', [
   'as' => 'admin',
   'uses' =>'Admin\AdminController@index'
 ]);
+
+Route::group(array('prefix' => 'admin'), function() {
+
+//  Route::group(array('before' => 'admin-auth'), function() {
+    Route::controller('variables', '\Devfactory\Variables\Controllers\VariablesController');
+//  });
+
+});

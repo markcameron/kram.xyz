@@ -93,7 +93,7 @@
       <div class="box box-primary box-solid collapsed-box">
 
         <div class="box-header">
-          <h3 class="box-title">Select field</h3>
+          <h3 class="box-title">Date field</h3>
 
           <div class="box-tools pull-right">
             <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>

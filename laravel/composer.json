@@ -9,6 +9,7 @@
     "illuminate/html": "5.*",
     "devfactory/imagecache": "3.0.*",
     "devfactory/media": "2.0.*",
+    "devfactory/variables": "2.0.*",
     "devfactory/minify": "1.0.*"
   },
   "require-dev": {

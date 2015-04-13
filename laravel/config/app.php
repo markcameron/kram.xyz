@@ -148,9 +148,10 @@ return [
    /*
     * Custom Service Providers
     */
-    'Devfactory\Minify\MinifyServiceProvider',
     'Illuminate\Html\HtmlServiceProvider',
     'Devfactory\Media\MediaServiceProvider',
+    'Devfactory\Minify\MinifyServiceProvider',
+    'Devfactory\Variables\VariablesServiceProvider',
     'That0n3guy\Transliteration\TransliterationServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
@@ -205,6 +206,7 @@ return [
 
     // Custom/Vendor
     'Minify'    => 'Devfactory\Minify\Facades\MinifyFacade',
+    'Variables' => 'Devfactory\Variables\Facades\VariablesFacade',
     'Form'      => 'Illuminate\Html\FormFacade',
     'HTML'      => 'Illuminate\Html\HtmlFacade',
 	],
