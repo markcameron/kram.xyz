@@ -28,8 +28,13 @@ Route::get('admin', [
 
 Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
 
-//  Route::group(array('before' => 'admin-auth'), function() {
-    Route::controller('variables', '\Devfactory\Variables\Controllers\VariablesController');
-//  });
+  // Root
+  Route::get('/', [
+    'as' => 'admin',
+    'uses' =>'Admin\AdminController@index',
+  ]);
+
+  // Contrib/Packages
+  Route::controller('variables', '\Devfactory\Variables\Controllers\VariablesController');
 
 });
