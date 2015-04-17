@@ -27,4 +27,8 @@ return array(
     'value' => 25,
     'translation_key' => 'variables.items_per_page',
   ),
+  'rollbar_debug' => array(
+    'value' => 'no',
+    'translation_key' => 'variables.rollbar_debug',
+  ),
 );

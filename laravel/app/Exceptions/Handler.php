@@ -24,7 +24,9 @@ class Handler extends ExceptionHandler {
    */
   public function report(Exception $e)
   {
-    \Log::error($e);
+    if (Variables::get('rollbar_debug') == 'yes') {
+      \Log::error($e);
+    }
 
     return parent::report($e);
   }
