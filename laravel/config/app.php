@@ -155,6 +155,7 @@ return [
     'That0n3guy\Transliteration\TransliterationServiceProvider',
     'Jenssegers\Rollbar\RollbarServiceProvider',
     'Menu\MenuServiceProvider',
+    'Bpocallaghan\Generators\GeneratorsServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',

@@ -1,0 +1,99 @@
+<?php
+
+namespace {{namespace}};
+
+use {{rootNamespace}}Models\{{model}};
+use {{rootNamespace}}Http\Requests;
+
+use {{rootNamespace}}Http\Controllers\Admin\AdminController;
+
+use Redirect;
+
+use Illuminate\Http\Request;
+
+class {{class}} extends AdminController {
+
+  /**
+   * Display a listing of {{collection}}.
+   *
+   * @return Response
+   */
+  public function index() {
+    ${{resource}} = {{model}}::orderBy('created_at', 'DESC')
+      ->paginate(Variables::get('items_per_page'));
+
+    return $this->view('admin.{{view}}.index')->with('{{resource}}', ${{resource}});
+  }
+
+  /**
+   * Show the form for creating a new {{resource}}.
+   *
+   * @return Response
+   */
+  public function create() {
+    return $this->view('admin.{{view}}.create');
+  }
+
+  /**
+   * Store a newly created {{resource}} in storage.
+   *
+   * @param Request $request
+   * @return Response
+   */
+  public function store(Request $request) {
+    $this->validate($request, {{model}}::$rules, {{model}}::$messages);
+
+    ${{resource}} = $this->createEntry('App\Models\{{model}}', $request->all());
+
+    return Redirect::route('admin.{{view}}.index');
+  }
+
+  /**
+   * Display the specified {{resource}}.
+   *
+   * @param {{model}} ${{resource}}
+   * @return Response
+   */
+  public function show({{model}} ${{resource}}) {
+    return $this->view('admin.{{view}}.show')->with('{{resource}}', ${{resource}});
+  }
+
+  /**
+   * Show the form for editing the specified {{resource}}.
+   *
+   * @param {{model}} ${{resource}}
+   * @return Response
+   */
+  public function edit({{model}} ${{resource}}) {
+    return $this->view('{{view}}.add_edit')->with('{{resource}}', ${{resource}});
+  }
+
+  /**
+   * Update the specified {{resource}} in storage.
+   *
+   * @param {{model}}  ${{resource}}
+   * @param Request    $request
+   * @return Response
+   */
+  public function update({{model}} ${{resource}}, Request $request) {
+    $this->validate($request, {{model}}::$rules, {{model}}::$messages);
+
+    ${{resource}} = $this->updateEntry(${{resource}}, $request->all());
+
+    return Redirect::route('{{view}}.index');
+  }
+
+  /**
+   * Remove the specified {{resource}} from storage.
+   *
+   * @param {{model}}  ${{resource}}
+   * @param Request    $request
+   * @return Response
+   */
+  public function destroy({{model}} ${{resource}}, Request $request) {
+    $this->deleteEntry(${{resource}}, $request);
+
+    return Redirect::route('{{view}}.index');
+  }
+
+}
