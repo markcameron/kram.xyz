@@ -163,6 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- REQUIRED JS SCRIPTS -->
     {!! Minify::javascript(array(
     '/assets/vendor/adminlte/plugins/jQuery/jQuery-2.1.3.min.js',
+    '/assets/vendor/adminlte/plugins/jQueryUI/jquery-ui-1.10.3.min.js',
     '/assets/vendor/adminlte/bootstrap/js/bootstrap.min.js',
     '/assets/vendor/adminlte/dist/js/app.min.js',
     '/assets/vendor/adminlte/plugins/datepicker/bootstrap-datepicker.js',
