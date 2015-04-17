@@ -19,8 +19,12 @@
  */
 
 return array(
-  'example' => array(
-    'value' => 'Example data!',
-    'translation_key' => 'variables.example',
+  'site_name' => array(
+    'value' => 'Stark',
+    'translation_key' => 'variables.site_name',
+  ),
+  'items_per_page' => array(
+    'value' => 25,
+    'translation_key' => 'variables.items_per_page',
   ),
 );
