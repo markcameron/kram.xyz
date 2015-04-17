@@ -19,10 +19,10 @@ class {{class}} extends AdminController {
    * @return Response
    */
   public function index() {
-    ${{resource}} = {{model}}::orderBy('created_at', 'DESC')
+    ${{resource}}s = {{model}}::orderBy('created_at', 'DESC')
       ->paginate(Variables::get('items_per_page'));
 
-    return $this->view('admin.{{view}}.index')->with('{{resource}}', ${{resource}});
+    return $this->view('{{view}}.index')->with('{{resource}}s', ${{resource}}s);
   }
 
   /**
@@ -31,7 +31,7 @@ class {{class}} extends AdminController {
    * @return Response
    */
   public function create() {
-    return $this->view('admin.{{view}}.create');
+    return $this->view('{{view}}.create');
   }
 
   /**
@@ -45,7 +45,7 @@ class {{class}} extends AdminController {
 
     ${{resource}} = $this->createEntry('App\Models\{{model}}', $request->all());
 
-    return Redirect::route('admin.{{view}}.index');
+    return Redirect::route('{{view}}.index');
   }
 
   /**
@@ -55,7 +55,7 @@ class {{class}} extends AdminController {
    * @return Response
    */
   public function show({{model}} ${{resource}}) {
-    return $this->view('admin.{{view}}.show')->with('{{resource}}', ${{resource}});
+    return $this->view('{{view}}.show')->with('{{resource}}', ${{resource}});
   }
 
   /**

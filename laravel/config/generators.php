@@ -4,7 +4,7 @@ return [
 
 	'model_namespace'      => '\Models',
 
-	'controller_namespace' => '\Http\Controllers',
+	'controller_namespace' => '\Http\Controllers\Admin',
 
 
 	/*

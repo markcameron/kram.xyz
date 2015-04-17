@@ -28,6 +28,8 @@ Route::get('admin', [
 
 Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
 
+  Route::resource('users', '\App\Http\Controllers\Admin\UsersController');
+
   // Root
   Route::get('/', [
     'as' => 'admin',

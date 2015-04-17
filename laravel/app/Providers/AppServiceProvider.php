@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider {
    */
   public function boot(Guard $auth) {
     view()->composer('admin.*', function($view) use ($auth) {
-      $view->with('user', $auth->user());
+      $view->with('current_user', $auth->user());
     });
   }
 
