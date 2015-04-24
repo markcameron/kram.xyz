@@ -17,6 +17,12 @@ class UserTableSeeder extends Seeder {
     $role_admin->description  = 'Site Administrator';
     $role_admin->save();
 
+    $role_admin = new Role();
+    $role_admin->name         = 'user';
+    $role_admin->display_name = 'User';
+    $role_admin->description  = 'User with access to logged in areas of the site, but not the admin';
+    $role_admin->save();
+
     $user = User::create(
       [
         'first_name' => 'Admin',

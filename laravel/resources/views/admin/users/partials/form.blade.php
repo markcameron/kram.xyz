@@ -4,7 +4,9 @@
 
 <div class="box-body">
 
-  {!! Form::itemText('name', trans('users.first_name'), NULL, $errors) !!}
+  {!! Form::itemText('first_name', trans('users.first_name'), NULL, $errors) !!}
+
+  {!! Form::itemText('last_name', trans('users.last_name'), NULL, $errors) !!}
 
   {!! Form::itemText('email', trans('users.email'), NULL, $errors) !!}
 
