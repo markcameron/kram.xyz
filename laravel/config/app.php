@@ -156,6 +156,7 @@ return [
     'Jenssegers\Rollbar\RollbarServiceProvider',
     'Menu\MenuServiceProvider',
     'Bpocallaghan\Generators\GeneratorsServiceProvider',
+    'Zizaco\Entrust\EntrustServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
@@ -213,6 +214,7 @@ return [
     'Form'      => 'Illuminate\Html\FormFacade',
     'HTML'      => 'Illuminate\Html\HtmlFacade',
     'Menu'      => 'Menu\Menu',
+    'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 	],
 
 ];

@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Role;
 
 class UserTableSeeder extends Seeder {
 
@@ -10,6 +11,11 @@ class UserTableSeeder extends Seeder {
       return;
     }
 
+    $role_admin = new Role();
+    $role_admin->name         = 'admin';
+    $role_admin->display_name = 'Admin';
+    $role_admin->description  = 'Site Administrator';
+    $role_admin->save();
 
     $user = User::create(
       [
@@ -20,5 +26,6 @@ class UserTableSeeder extends Seeder {
       ]
     );
 
+    $user->attachRole($role_admin);
   }
 }
