@@ -30,6 +30,34 @@ Form::macro('itemText', function($name, $label, $value = NULL, $errors = NULL, $
 
 /*
  |--------------------------------------------------------------------------
+ | Handles the input for a single text field
+ |--------------------------------------------------------------------------
+ |
+ */
+Form::macro('itemPassword', function($name, $label, $errors = NULL, $extras = array()) {
+  $default_extras = array(
+    'disabled' => FALSE,
+    'help' => '',
+    'class' => '',
+  );
+
+  $extras = array_merge($default_extras, $extras);
+
+  $options = array(
+    'class' => 'form-control '. $extras['class'],
+  );
+
+  if ($extras['disabled']) {
+    $options['disabled'] = 'disabled';
+  }
+
+  $help = $extras['help'];
+
+  return View::make('macros.item_password', compact('name', 'label', 'errors', 'help', 'options'));
+});
+
+/*
+ |--------------------------------------------------------------------------
  | Handles the input for a single textarea field
  |--------------------------------------------------------------------------
  |
