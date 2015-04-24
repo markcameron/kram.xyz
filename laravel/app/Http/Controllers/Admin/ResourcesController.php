@@ -62,7 +62,7 @@ class ResourcesController extends AdminController {
    * @return Response
    */
   public function store(Request $request) {
-    $this->validate($request, $this->model->rules);
+    $this->validate($request, isset($this->model->rules_create) ? $this->model->rules_create : $this->model->rules);
 
     $fillable_data = array_only($request->all(), $this->model->getFillable());
 
@@ -88,7 +88,7 @@ class ResourcesController extends AdminController {
    * @return Response
    */
   public function update($id, Request $request) {
-    $this->validate($request, $this->model->rules);
+    $this->validate($request, isset($this->model->rules_update) ? $this->model->rules_update : $this->model->rules);
 
     ${$this->resource} = $this->model->findOrFail($id);
 
