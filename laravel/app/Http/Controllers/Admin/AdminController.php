@@ -1,11 +1,11 @@
 <?php namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Controller;
 
-class AdminController extends AuthController {
+class AdminController extends Controller {
 
 	public function __construct() {
-//    parent::__construct();
+    $this->middleware('admin.verify');
   }
 
   public function index() {
