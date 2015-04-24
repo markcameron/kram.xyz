@@ -86,23 +86,25 @@ class AdminMenu {
   ),
   ),
   ),
-
-  array(
-  'url' => '#',
-  'text' => Lang::get('menus.admin.users'),
-  'icon' => 'users',
-  'children' => array(
-  array(
-  'url' => route('admin.users.index'),
-  'text' => Lang::get('menus.admin.users_manage'),
-  ),
-  array(
-  'url' => route('admin.groups.index'),
-  'text' => Lang::get('menus.admin.users_groups'),
-  ),
-  ),
-  ),
 */
+      array(
+        'url' => '#',
+        'text' => trans('menus.admin.users'),
+        'icon' => 'users',
+        'children' => array(
+          array(
+            'url' => route('admin.users.index'),
+            'text' => trans('menus.admin.users_manage'),
+          ),
+          /*
+          array(
+            'url' => route('admin.groups.index'),
+            'text' => Lang::get('menus.admin.users_groups'),
+          ),
+          */
+        ),
+      ),
+
       array(
         'url' => '#',
         'text' => trans('menus.admin.configuration'),
