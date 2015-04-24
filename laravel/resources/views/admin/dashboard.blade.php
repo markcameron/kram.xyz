@@ -138,7 +138,7 @@
           <br>
           <h4>Example</h4>
           <code>
-            &#123;!! Form::singleUpload('name', trans('upload.label'), $user, 'profile_picture') !!&#125;
+            &#123;!! Form::singleUpload('name', trans('upload.label'), $current_user, 'profile_picture') !!&#125;
           </code>
           <br>
           <br>
@@ -171,7 +171,7 @@
           <br>
           <br>
 
-          {!! Form::multiUpload($user, 'profile_picture') !!}
+          {!! Form::multiUpload($current_user, 'profile_picture') !!}
         </div>
 
       </div>
