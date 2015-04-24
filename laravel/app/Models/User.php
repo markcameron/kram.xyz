@@ -48,12 +48,14 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     'first_name'  => 'required',
     'last_name'  => 'required',
     'email' => 'required|unique:users,email',
+    'password' => 'required|confirmed',
   ];
 
   public $rules_update = [
     'first_name'  => 'required',
     'last_name'  => 'required',
     'email' => 'required',
+    'password' => 'confirmed',
   ];
 
   /**
@@ -65,5 +67,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	public function getFullNameAttribute() {
 		return "{$this->first_name} {$this->last_name}";
 	}
+
+  public function setPasswordAttribute($value) {
+    $this->attributes['password'] = bcrypt($value);
+  }
 
 }

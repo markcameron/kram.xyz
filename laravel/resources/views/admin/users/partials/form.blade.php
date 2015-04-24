@@ -8,6 +8,10 @@
 
   {!! Form::itemText('last_name', trans('users.last_name'), NULL, $errors) !!}
 
+  {!! Form::itemPassword('password', trans('users.password'), $errors) !!}
+
+  {!! Form::itemPassword('password_confirmation', trans('users.password_confirmation'), $errors) !!}
+
   {!! Form::itemText('email', trans('users.email'), NULL, $errors) !!}
 
 </div>
