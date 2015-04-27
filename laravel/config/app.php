@@ -157,6 +157,7 @@ return [
     'Menu\MenuServiceProvider',
     'Bpocallaghan\Generators\GeneratorsServiceProvider',
     'Zizaco\Entrust\EntrustServiceProvider',
+    'Philo\Translate\TranslateServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
@@ -214,7 +215,7 @@ return [
     'Form'      => 'Illuminate\Html\FormFacade',
     'HTML'      => 'Illuminate\Html\HtmlFacade',
     'Menu'      => 'Menu\Menu',
-    'Entrust' => 'Zizaco\Entrust\EntrustFacade',
+    'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
 	],
 
 ];
