@@ -161,6 +161,8 @@ return [
     'Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider',
     'Cviebrock\EloquentSluggable\SluggableServiceProvider',
     'Dimsav\Translatable\TranslatableServiceProvider',
+    'Intervention\Image\ImageServiceProvider',
+    'Devfactory\Imagecache\ImagecacheServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
@@ -219,6 +221,8 @@ return [
     'HTML'      => 'Illuminate\Html\HtmlFacade',
     'Menu'      => 'Menu\Menu',
     'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
+    'Imagecache'=> 'Devfactory\Imagecache\Facades\ImagecacheFacade',
+
 	],
 
 ];
