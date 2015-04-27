@@ -14,9 +14,7 @@
 
         <div class="box-header">
 
-          {!! Form::open(array('method'=>'GET','route' => array('admin.users.create'))) !!}
-          {!! Form::submit('Create new user', array('class'=>'btn btn-primary btn-flat margin-bottom')) !!}
-          {!! Form::close() !!}
+          {!! Form::buttonCreate(array('admin.users.create')) !!}
 
           <div class="box-tools">
 
@@ -51,15 +49,9 @@
 		  <td>{{ $user->email }}</td>
 		  <td>{{ $user->created_at->diffForHumans() }}</td>
 		  <td>{{ !is_null($user->last_seen) ? $user->last_seen->diffForHumans() : '-' }}</td>
-		  <td>
-		    <div class="btn-group pull-right">
-		      {!! Form::open(array('style' => 'margin-right: 5px', 'class' => 'pull-left', 'method'=>'GET','route'=> array('admin.users.edit', $user->id))) !!}
-		      {!! Form::button('Edit',array('class'=>'btn btn-xs btn-primary btn-flat', 'type' => 'submit')) !!}
-		      {!! Form::close() !!}
-		      {!! Form::open(array('class' => 'pull-left', 'method'=>'DELETE','route'=> array('admin.users.destroy', $user->id))) !!}
-		      {!! Form::button('Delete',array('class'=>'delete-confirm-dialog btn btn-xs btn-danger btn-flat', 'type' => 'submit')) !!}
-		      {!! Form::close() !!}
-		    </div>
+		  <td class="text-right">
+		    {!! Form::buttonEdit(array('admin.users.edit', $user->id)) !!}
+		    {!! Form::buttonDelete(array('admin.users.destroy', $user->id)) !!}
 		  </td>
 		</tr>
 	      @endforeach
