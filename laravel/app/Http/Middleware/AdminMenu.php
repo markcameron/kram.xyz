@@ -120,15 +120,15 @@ class AdminMenu {
           ),
         ),
       ),
-/*
-  array(
-  'url' => url('logviewer'),
-  'text' => Lang::get('menus.admin.logs'),
-  'icon' => 'bug',
-  'children' => array(
-  ),
-  ),
-*/
+
+      array(
+        'url' => url('admin/logs'),
+        'text' => trans('menus.admin.logs'),
+        'icon' => 'bug',
+        'children' => array(
+        ),
+      ),
+
     );
   }
 

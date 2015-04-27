@@ -158,6 +158,7 @@ return [
     'Bpocallaghan\Generators\GeneratorsServiceProvider',
     'Zizaco\Entrust\EntrustServiceProvider',
     'Philo\Translate\TranslateServiceProvider',
+    'Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
