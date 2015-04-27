@@ -16,7 +16,8 @@
     "bpocallaghan/generators": "1.0.*",
     "zizaco/entrust": "dev-laravel-5",
     "philo/laravel-translate": "~2.0",
-    "rap2hpoutre/laravel-log-viewer": "0.2.*"
+    "rap2hpoutre/laravel-log-viewer": "0.2.*",
+    "cviebrock/eloquent-sluggable": ">=3.0.0-alpha"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",
