@@ -144,6 +144,20 @@ Form::macro('itemSelect', function($name, $label, $options, $value = NULL, $erro
 
 /*
  |--------------------------------------------------------------------------
+ | Create create button for index listings
+ |--------------------------------------------------------------------------
+ |
+ */
+Form::macro('buttonCreate', function($route, $text = NULL) {
+  if (is_null($text)) {
+    $text = trans('admin.buttons.create');
+  }
+
+  return View::make('macros.button_create', compact('text', 'route'));
+});
+
+/*
+ |--------------------------------------------------------------------------
  | Create edit button for index listings
  |--------------------------------------------------------------------------
  |
@@ -158,13 +172,13 @@ Form::macro('buttonEdit', function($route, $text = NULL) {
 
 /*
  |--------------------------------------------------------------------------
- | Create edit button for index listings
+ | Create delete  button for index listings
  |--------------------------------------------------------------------------
  |
  */
 Form::macro('buttonDelete', function($route, $text = NULL) {
   if (is_null($text)) {
-    $text = trans('admin.buttons.edit');
+    $text = trans('admin.buttons.delete');
   }
 
   return View::make('macros.button_delete', compact('text', 'route'));
