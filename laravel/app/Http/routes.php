@@ -30,6 +30,7 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
 
   Route::resource('users', '\App\Http\Controllers\Admin\UsersController');
   Route::resource('roles', '\App\Http\Controllers\Admin\RolesController');
+  Route::resource('pages', '\App\Http\Controllers\Admin\PagesController');
 
   Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
