@@ -19,6 +19,11 @@ class ResourcesController extends AdminController {
 
   protected $resources;
 
+  public function __construct() {
+    parent::__construct();
+  }
+
+
   public function setModel($model) {
     $this->model = $model;
   }

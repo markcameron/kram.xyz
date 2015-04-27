@@ -14,6 +14,8 @@ use Illuminate\Http\Request;
 class UsersController extends ResourcesController {
 
   public function __construct() {
+    parent::__construct();
+
     $this->setModel(new User());
     $this->setViewPath('admin.users');
     $this->setResource('user');

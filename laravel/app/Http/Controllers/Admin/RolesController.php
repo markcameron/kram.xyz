@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 class RolesController extends ResourcesController {
 
   public function __construct() {
+    parent::__construct();
+
     $this->setModel(new Role());
     $this->setViewPath('admin.roles');
     $this->setResource('role');

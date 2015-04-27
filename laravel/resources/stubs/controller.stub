@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 class {{class}} extends ResourcesController {
 
   public function __construct() {
+    parent::__construct();
+
     $this->setModel(new {{model}}());
     $this->setViewPath('admin.{{resource}}');
     $this->setResource('{{resource}}');
