@@ -96,12 +96,10 @@ class AdminMenu {
             'url' => route('admin.users.index'),
             'text' => trans('menus.admin.users_manage'),
           ),
-          /*
           array(
-            'url' => route('admin.groups.index'),
-            'text' => Lang::get('menus.admin.users_groups'),
+            'url' => route('admin.roles.index'),
+            'text' => trans('menus.admin.roles'),
           ),
-          */
         ),
       ),
 
