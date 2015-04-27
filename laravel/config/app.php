@@ -160,6 +160,7 @@ return [
     'Philo\Translate\TranslateServiceProvider',
     'Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider',
     'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+    'Dimsav\Translatable\TranslatableServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
