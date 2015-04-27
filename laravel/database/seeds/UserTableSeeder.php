@@ -17,11 +17,11 @@ class UserTableSeeder extends Seeder {
     $role_admin->description  = 'Site Administrator';
     $role_admin->save();
 
-    $role_admin = new Role();
-    $role_admin->name         = 'user';
-    $role_admin->display_name = 'User';
-    $role_admin->description  = 'User with access to logged in areas of the site, but not the admin';
-    $role_admin->save();
+    $role_user = new Role();
+    $role_user->name         = 'user';
+    $role_user->display_name = 'User';
+    $role_user->description  = 'User with access to logged in areas of the site, but not the admin';
+    $role_user->save();
 
     $user = User::create(
       [
@@ -33,5 +33,16 @@ class UserTableSeeder extends Seeder {
     );
 
     $user->attachRole($role_admin);
+
+    $user = User::create(
+      [
+        'first_name' => 'User',
+        'last_name' => 'Account',
+        'email' => 'user@example.com',
+        'password' => 'user',
+      ]
+    );
+
+    $user->attachRole($role_user);
   }
 }

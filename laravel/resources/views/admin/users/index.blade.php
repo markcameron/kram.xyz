@@ -34,6 +34,7 @@
 		<th>Name</th>
 		<th>E-mail</th>
 		<th>Member since</th>
+		<th>Last seen</th>
 		<th></th>
 	      </tr>
 
@@ -49,6 +50,7 @@
 		  <td>{{ $user->full_name }}</td>
 		  <td>{{ $user->email }}</td>
 		  <td>{{ $user->created_at->diffForHumans() }}</td>
+		  <td>{{ !is_null($user->last_seen) ? $user->last_seen->diffForHumans() : '-' }}</td>
 		  <td>
 		    <div class="btn-group pull-right">
 		      {!! Form::open(array('style' => 'margin-right: 5px', 'class' => 'pull-left', 'method'=>'GET','route'=> array('admin.users.edit', $user->id))) !!}
