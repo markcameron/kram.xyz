@@ -14,9 +14,7 @@
 
         <div class="box-header">
 
-          {!! Form::open(array('method'=>'GET','route' => array('admin.{{collection}}.create'))) !!}
-          {!! Form::submit(trans('{{collection}}.button.create'), array('class'=>'btn btn-primary btn-flat margin-bottom')) !!}
-          {!! Form::close() !!}
+          {!! Form::buttonCreate(array('admin.{{collection}}.create')) !!}
 
           <div class="box-tools">
 
