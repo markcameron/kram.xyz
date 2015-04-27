@@ -141,3 +141,31 @@ Form::macro('itemSelect', function($name, $label, $options, $value = NULL, $erro
 
   return View::make('macros.item_select', compact('name', 'label', 'options', 'value', 'errors', 'help', 'input_options'));
 });
+
+/*
+ |--------------------------------------------------------------------------
+ | Create edit button for index listings
+ |--------------------------------------------------------------------------
+ |
+ */
+Form::macro('buttonEdit', function($route, $text = NULL) {
+  if (is_null($text)) {
+    $text = trans('admin.buttons.edit');
+  }
+
+  return View::make('macros.button_edit', compact('text', 'route'));
+});
+
+/*
+ |--------------------------------------------------------------------------
+ | Create edit button for index listings
+ |--------------------------------------------------------------------------
+ |
+ */
+Form::macro('buttonDelete', function($route, $text = NULL) {
+  if (is_null($text)) {
+    $text = trans('admin.buttons.edit');
+  }
+
+  return View::make('macros.button_delete', compact('text', 'route'));
+});
