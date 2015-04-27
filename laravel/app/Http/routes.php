@@ -29,6 +29,7 @@ Route::get('admin', [
 Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
 
   Route::resource('users', '\App\Http\Controllers\Admin\UsersController');
+  Route::resource('roles', '\App\Http\Controllers\Admin\RolesController');
 
   // Root
   Route::get('/', [
