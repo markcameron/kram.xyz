@@ -36,7 +36,7 @@ class ResourcesController extends AdminController {
   }
 
   /**
-   * Display a listing of users.
+   * Display a listing of the given resources.
    *
    * @return Response
    */
@@ -68,7 +68,7 @@ class ResourcesController extends AdminController {
 
     $this->model->create($fillable_data);
 
-    return Redirect::route('admin.users.index')->with('success', 'yeah');
+    return Redirect::route($this->view_path . '.index')->with('success', 'yeah');
   }
 
   /**
@@ -96,7 +96,7 @@ class ResourcesController extends AdminController {
 
     ${$this->resource}->update($fillable_data);
 
-    return Redirect::route('admin.users.index')->with('success', 'yeah');
+    return Redirect::route($this->view_path . '.index')->with('success', 'yeah');
   }
 
   /**
