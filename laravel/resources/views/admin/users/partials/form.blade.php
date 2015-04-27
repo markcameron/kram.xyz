@@ -1,5 +1,5 @@
 <div class="box-header">
-  <h3 class="box-title">{{ trans('cases.titles.identity') }}</h3>
+  <h3 class="box-title">{{ trans('users.titles.identity') }}</h3>
 </div>
 
 <div class="box-body">

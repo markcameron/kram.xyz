@@ -1,7 +1,7 @@
 @extends('admin')
 
 @section('header')
-  <h1>{{ trans('cases.edit.header') }} - {{ $user->name }}</h1>
+  <h1>{{ trans('users.edit.header') }} - {{ $user->name }}</h1>
 @stop
 
 @section('content')

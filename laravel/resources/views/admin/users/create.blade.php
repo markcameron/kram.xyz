@@ -1,7 +1,7 @@
 @extends('admin')
 
 @section('header')
-  <h1>{{ trans('cases.create.header') }}</h1>
+  <h1>{{ trans('users.create.header') }}</h1>
 @stop
 
 @section('content')
