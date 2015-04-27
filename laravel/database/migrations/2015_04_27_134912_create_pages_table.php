@@ -15,6 +15,7 @@ class CreatePagesTable extends Migration
     Schema::create('pages', function(Blueprint $table)
     {
       $table->increments('id');
+      $table->boolean('status')->default(FALSE);
       $table->timestamps();
     });
 
@@ -30,7 +31,6 @@ class CreatePagesTable extends Migration
       $table->text('teaser');
       $table->longText('body');
       $table->string('slug');
-      $table->boolean('status')->default(TRUE);
     });
 	}
 

@@ -11,6 +11,7 @@ class Page extends Model {
     'title',
     'teaser',
     'body',
+    'slug',
   ];
 
   protected $fillable = [

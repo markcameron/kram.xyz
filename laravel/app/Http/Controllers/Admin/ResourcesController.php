@@ -4,8 +4,10 @@ use App\Http\Requests;
 
 use App\Http\Controllers\Admin\AdminController;
 
+use App;
 use Redirect;
 use Variables;
+use App\Libs\Helpers;
 
 use Illuminate\Http\Request;
 
@@ -58,6 +60,8 @@ class ResourcesController extends AdminController {
    * @return Response
    */
   public function create() {
+    App::setLocale(Helpers::getLang());
+
     return view($this->view_path . '.create');
   }
 
@@ -71,6 +75,8 @@ class ResourcesController extends AdminController {
 
     $fillable_data = array_only($request->all(), $this->model->getFillable());
 
+    App::setLocale(Helpers::getLang());
+
     $this->model->create($fillable_data);
 
     return Redirect::route($this->view_path . '.index')->with('success', 'yeah');
@@ -83,6 +89,8 @@ class ResourcesController extends AdminController {
    */
   public function edit($id) {
     ${$this->resource} = $this->model->findOrFail($id);
+
+    App::setLocale(Helpers::getLang());
 
     return view($this->view_path . '.edit', compact($this->resource));
   }
@@ -98,6 +106,8 @@ class ResourcesController extends AdminController {
     ${$this->resource} = $this->model->findOrFail($id);
 
     $fillable_data = array_only($request->all(), $this->model->getFillable());
+
+    App::setLocale(Helpers::getLang());
 
     ${$this->resource}->update($fillable_data);
 
