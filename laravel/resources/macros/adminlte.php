@@ -88,6 +88,36 @@ Form::macro('itemTextarea', function($name, $label, $value = NULL, $errors = NUL
 
 /*
  |--------------------------------------------------------------------------
+ | Handles the input for a single textarea field
+ |--------------------------------------------------------------------------
+ |
+ */
+Form::macro('itemWysiwyg', function($name, $label, $value = NULL, $errors = NULL, $extras = array()) {
+  $default_extras = array(
+    'disabled' => FALSE,
+    'help' => '',
+    'class' => '',
+    'rows' => '3',
+  );
+
+  $extras = array_merge($default_extras, $extras);
+
+  $options = array(
+    'class' => 'form-control wysiwyg'. $extras['class'],
+    'rows' => $extras['rows'],
+  );
+
+  if ($extras['disabled']) {
+    $options['disabled'] = 'disabled';
+  }
+
+  $help = $extras['help'];
+
+  return View::make('macros.item_wysiwyg', compact('name', 'label', 'value', 'errors', 'help', 'options'));
+});
+
+/*
+ |--------------------------------------------------------------------------
  | Handles the input for a single date field
  |--------------------------------------------------------------------------
  |

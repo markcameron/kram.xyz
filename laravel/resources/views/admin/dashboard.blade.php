@@ -65,6 +65,34 @@
       <div class="box box-primary box-solid collapsed-box">
 
         <div class="box-header">
+          <h3 class="box-title">WYSIWYG</h3>
+
+          <div class="box-tools pull-right">
+            <button data-widget="collapse" class="btn btn-box-tool"><i class="fa fa-plus"></i></button>
+          </div>
+        </div>
+
+        <div class="box-body">
+          <code>
+            Form::itemWysiwyg($name, $label, $value = NULL, $errors = NULL, $extras = array())
+          </code>
+          <br>
+          <h4>Example</h4>
+          <code>
+            &#123;!! Form::itemWysiwyg('name', trans('textarea.label'), 'value', $errors, array('help' => 'help text', 'rows' => '3')) !!&#125;
+          </code>
+          <br>
+          <br>
+
+          {!! Form::itemWysiwyg('name', trans('wysiwyg.label'), '', $errors, array('help' => 'help text', 'rows' => '3')) !!}
+
+        </div>
+
+      </div>
+
+      <div class="box box-primary box-solid collapsed-box">
+
+        <div class="box-header">
           <h3 class="box-title">Password field</h3>
 
           <div class="box-tools pull-right">

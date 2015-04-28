@@ -12,4 +12,6 @@ $(function() {
     autoclose: true
   });
 
+  $(".wysiwyg").wysihtml5();
+
 });
