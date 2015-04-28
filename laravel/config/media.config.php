@@ -10,7 +10,7 @@ return array(
    * The location of the directory where you wanted to store  your uploaded
    * files on the site relative to the laravel public directory
    */
-  'files_directory' => 'uploads/',
+  'files_directory' => 'files/',
 
   /**
    * Set to TRUE if want sub directories by Model to be created in the
