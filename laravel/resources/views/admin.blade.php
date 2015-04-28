@@ -83,17 +83,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 <!-- Menu Toggle Button -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <!-- The user image in the navbar-->
-                  {!! Imagecache::get($current_user, '80x80')->img_nosize !!}
+                  {!! Imagecache::get($current_user->getMedia()->first(), '80x80', ['class' => 'user-image'])->img_nosize !!}
                   <!-- hidden-xs hides the username on small devices so only the image appears. -->
                   <span class="hidden-xs">{{ $current_user->full_name }}</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- The user image in the menu -->
                   <li class="user-header">
-                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    {!! Imagecache::get($current_user->getMedia()->first(), '80x80', ['class' => 'img-circle'])->img_nosize !!}
                     <p>
                       {{ $current_user->full_name }}
-                      <small>Member since Nov. 2012</small>
+                      <small>Member since {{ $current_user->created_at->format('M. Y') }}</small>
                     </p>
                   </li>
                   <!-- Menu Footer-->

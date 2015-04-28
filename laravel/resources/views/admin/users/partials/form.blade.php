@@ -14,4 +14,6 @@
 
   {!! Form::itemText('email', trans('users.email'), NULL, $errors) !!}
 
+  {!! Form::singleUpload('image', trans('pages.image'), isset($user) ? $user : NULL, 'image') !!}
+
 </div>

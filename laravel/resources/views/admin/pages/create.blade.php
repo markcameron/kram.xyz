@@ -8,7 +8,7 @@
 
   <div class="row">
 
-    {!! Form::open(array('method' => 'POST', 'route' => array('admin.pages.store'))) !!}
+    {!! Form::open(array('method' => 'POST', 'route' => array('admin.pages.store'), 'files' => TRUE)) !!}
 
     <div class="col-md-8">
 

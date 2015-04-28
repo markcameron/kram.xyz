@@ -16,7 +16,7 @@
 
         </div><!-- /.box-header -->
 
-        {!! Form::model($user, array('method' => 'PUT', 'route' => array('admin.users.update', $user->id))) !!}
+        {!! Form::model($user, array('method' => 'PUT', 'route' => array('admin.users.update', $user->id), 'files' => TRUE)) !!}
 
         @include('admin.users.partials.form')
 
