@@ -97,7 +97,7 @@ Form::macro('itemWysiwyg', function($name, $label, $value = NULL, $errors = NULL
     'disabled' => FALSE,
     'help' => '',
     'class' => '',
-    'rows' => '3',
+    'rows' => '15',
   );
 
   $extras = array_merge($default_extras, $extras);
