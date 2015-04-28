@@ -31,6 +31,7 @@
 		<th style="width: 10px">{{ trans('pages.index.table.id') }}</th>
 		<th>{{ trans('pages.index.table.title') }}</th>
 		<th>{{ trans('pages.index.table.created_at') }}</th>
+		<th>{{ trans('pages.index.table.published') }}</th>
 		<th></th>
 	      </tr>
 
@@ -45,6 +46,7 @@
 		  <td>{{ $row->id }}</td>
 		  <td>{{ $row->title }}</td>
 		  <td>{{ $row->created_at->diffForHumans() }}</td>
+                  <td class="text-center" style="width:80px;">{!! \App\Libs\Admin::renderStatusButton($row, 'Page') !!}</td>
 		  <td class="text-right">
 		    {!! Form::buttonEdit(array('admin.pages.edit', $row->id)) !!}
 		    {!! Form::buttonDelete(array('admin.pages.destroy', $row->id)) !!}

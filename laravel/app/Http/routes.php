@@ -21,12 +21,6 @@ Route::controllers([
 	'password' => 'Auth\PasswordController',
 ]);
 
-Route::get('admin', [
-  'as' => 'admin',
-  'uses' =>'Admin\AdminController@index',
-  'middleware' => 'admin'
-]);
-
 Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
 
   Route::resource('users', '\App\Http\Controllers\Admin\UsersController');
@@ -35,10 +29,10 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
 
   Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
-  // Root
-  Route::get('/', [
-    'as' => 'admin',
-    'uses' =>'Admin\AdminController@index',
+  // AdminController
+  Route::controller('/', '\App\Http\Controllers\Admin\AdminController', [
+    'getIndex' => 'admin',
+    'getChangeStatus' => 'admin.change.status',
   ]);
 
   // Macros

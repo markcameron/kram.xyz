@@ -12,7 +12,7 @@ trait TranslatableSluggableTrait {
       ->get();
 
     if (!$result) {
-      return new Illuminate\Support\Collection();
+      return new \Illuminate\Support\Collection();
     }
 
     return $instance->where('id', $result[0]->{strtolower(class_basename($instance) . '_id')})->get();

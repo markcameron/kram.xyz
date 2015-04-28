@@ -14,4 +14,21 @@ $(function() {
 
   $(".wysiwyg").wysihtml5();
 
+  // Toggle the status of a content type
+  $(document).on('click', '.change-status', function(e) {
+    e.preventDefault();
+
+    var link = $(this);
+    var href = link.attr('href');
+
+    $.ajax ({
+      type: 'GET',
+      dataType: 'json',
+      url: href,
+      success: function(data) {
+        link.parent().html(data.button);
+      }
+    });
+  });
+
 });
