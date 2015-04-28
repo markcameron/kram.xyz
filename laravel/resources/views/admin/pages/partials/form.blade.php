@@ -10,7 +10,7 @@
 
   {!! Form::itemTextarea('teaser', trans('pages.teaser'), NULL, $errors) !!}
 
-  {!! Form::itemText('body', trans('pages.body'), NULL, $errors) !!}
+  {!! Form::itemTextarea('body', trans('pages.body'), NULL, $errors) !!}
 
   {!! Form::hidden('lang', \App\Libs\Helpers::getLang()) !!}
 
