@@ -1,6 +1,6 @@
 <?php
 
-# modified at 28-04-2015 12:41
+# modified at 28-04-2015 15:37
 
 return  array(
 	'body'     => 'Body',
@@ -10,11 +10,13 @@ return  array(
 	'edit'     =>  array(
 		'header'   => 'Edit page',
 	),
+	'image'    => 'Image',
 	'index'    =>  array(
 		'header'   => 'Pages',
 		'table'    =>  array(
 			'created_at'   => 'Created',
 			'id'           => 'ID',
+			'published'    => 'Published',
 			'title'        => 'Title',
 		),
 	),
