@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <section class="signin clearfix col6 contentcenter">
+  <section class="reset-password clearfix col6 contentcenter">
 
     <h1>Reset Password</h1>
 
