@@ -5,9 +5,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
   <head>
+
     <meta charset="UTF-8">
     <title>{{ Variables::get('site_name') }} | Dashboard</title>
+
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Bootstrap 3.3.2 -->
     <!-- Font Awesome Icons -->
     {!! HTML::style('https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css') !!}
@@ -159,6 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     '/assets/vendor/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
     '/assets/vendor/js/dropzone.min.js',
     '/assets/custom/js/adminlte.js',
+    '/assets/custom/js/admin/macro-single-upload.js',
     )) !!}
 
     <!-- jQuery 2.1.3 -->
