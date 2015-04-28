@@ -47,3 +47,8 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
   Route::controller('variables', '\Devfactory\Variables\Controllers\VariablesController');
 
 });
+
+Route::bind('pages_slug', function($value, $route) {
+  return App\Models\Page::findBySlug($value);
+});
+Route::any('{pages_slug}', '\App\Http\Controllers\PagesController@show');
