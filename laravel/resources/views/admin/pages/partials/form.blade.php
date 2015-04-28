@@ -10,8 +10,10 @@
 
   {!! Form::itemTextarea('teaser', trans('pages.teaser'), NULL, $errors) !!}
 
-  {!! Form::itemTextarea('body', trans('pages.body'), NULL, $errors) !!}
+  {!! Form::itemWysiwyg('body', trans('pages.body'), NULL, $errors) !!}
 
   {!! Form::hidden('lang', \App\Libs\Helpers::getLang()) !!}
+
+  {!! Form::singleUpload('image', trans('pages.image'), isset($page) ? $page : NULL, 'image') !!}
 
 </div>

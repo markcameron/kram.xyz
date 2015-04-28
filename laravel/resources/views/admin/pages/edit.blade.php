@@ -16,7 +16,7 @@
 
         </div><!-- /.box-header -->
 
-        {!! Form::model($page, array('method' => 'PUT', 'route' => array('admin.pages.update', $page->id))) !!}
+        {!! Form::model($page, array('method' => 'PUT', 'route' => array('admin.pages.update', $page->id), 'files' => TRUE)) !!}
 
         @include('admin.pages.partials.form')
 

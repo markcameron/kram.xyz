@@ -18,7 +18,7 @@
 
       <h6>{{ $page->teaser }}</h6>
 
-      <p>{{ $page->body }}</p>
+      {!! $page->body !!}
 
     </section><!-- #event -->
 
