@@ -43,6 +43,9 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
     'uses' =>'Admin\AdminController@index',
   ]);
 
+  // Macros
+  Route::controller('macros', '\App\Http\Controllers\Admin\MacrosController');
+
   // Contrib/Packages
   Route::controller('variables', '\Devfactory\Variables\Controllers\VariablesController');
 
