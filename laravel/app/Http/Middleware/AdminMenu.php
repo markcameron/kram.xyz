@@ -74,19 +74,18 @@ class AdminMenu {
         ),
       ),
 
-/*
-  array(
-  'url' => '#',
-  'text' => Lang::get('menus.admin.content'),
-  'icon' => 'file',
-  'children' => array(
-  array(
-  'url' => route('admin.pages.index'),
-  'text' => 'Pages',
-  ),
-  ),
-  ),
-*/
+      array(
+        'url' => '#',
+        'text' => trans('menus.admin.content'),
+        'icon' => 'file',
+        'children' => array(
+          array(
+            'url' => route('admin.pages.index'),
+            'text' => trans('admin.content.pages'),
+          ),
+        ),
+      ),
+
       array(
         'url' => '#',
         'text' => trans('menus.admin.users'),
