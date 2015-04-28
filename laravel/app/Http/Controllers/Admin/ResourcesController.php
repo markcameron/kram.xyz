@@ -4,6 +4,7 @@ use App\Http\Requests;
 
 use App\Http\Controllers\Admin\AdminController;
 
+use App\Libs\Admin;
 use App;
 use Redirect;
 use Variables;
@@ -24,7 +25,6 @@ class ResourcesController extends AdminController {
   public function __construct() {
     parent::__construct();
   }
-
 
   public function setModel($model) {
     $this->model = $model;
@@ -77,7 +77,9 @@ class ResourcesController extends AdminController {
 
     App::setLocale(Helpers::getLang());
 
-    $this->model->create($fillable_data);
+    ${$this->resource} = $this->model->create($fillable_data);
+
+    Admin::handleFileUpload('image', ${$this->resource}, 'image');
 
     return Redirect::route($this->view_path . '.index')->with('success', 'yeah');
   }
@@ -110,6 +112,8 @@ class ResourcesController extends AdminController {
     App::setLocale(Helpers::getLang());
 
     ${$this->resource}->update($fillable_data);
+
+    Admin::handleFileUpload('image', ${$this->resource}, 'image');
 
     return Redirect::route($this->view_path . '.index')->with('success', 'yeah');
   }
