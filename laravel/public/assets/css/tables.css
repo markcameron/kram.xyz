@@ -1,0 +1,47 @@
+
+/*  ---------------------------------------
+
+    Table styles               
+
+---------------------------------------- */
+
+
+/* General settings
+---------------------------------------- */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 1.5em 0;
+    width: 100%;
+}
+th, td { padding: 8px; text-align: left; }
+th {
+  border-bottom: 2px solid #ccc;
+  font-weight: 600;
+  vertical-align: bottom;
+}
+td { border-top: 1px solid #ddd; }
+
+/* Striped rows
+---------------------------------------- */
+
+/*
+  Use the class ".table-zebra" on the table element to add zebra striping within the <tbody>.
+  You can achieve this effect in outdated browsers by adding the class ".odd" to the <tr> elements.
+*/
+
+.table-zebra tbody tr:nth-child(odd) td,
+.table-zebra tbody tr.odd td { background: #f9f9f9; }
+
+/* Bordered tables
+---------------------------------------- */
+
+/*
+  Use the class ".table-border" to add borders on all sides of the table and cells.
+*/
+
+.table-border,
+.table-border th,
+.table-border td { border: 1px solid #ddd; }
+.table-border th { border-bottom: 2px solid #ccc; }

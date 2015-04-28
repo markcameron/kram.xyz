@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* 01 STRUCTURE
+-------------------------------------------------------------- */
+
+
+
+/* 02 GLOBAL ELEMENTS
+-------------------------------------------------------------- */
+
+/* Images */
+
+.userpicture {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  padding: 4px;
+}
+.userpicture img {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Comments */
+
+#comments .comment-list > li { border-bottom: 1px solid #ddd; margin: 0 0 20px; padding: 0 0 20px; }
+#comments .comment-list li:last-child { border: 0; margin: 0; padding: 0; }
+#comments .userpicture { width: 75px; }
+#comments .comment-content { padding: 0 0 0 95px; }
+#comments .user { font-weight: 600; }
+#comments time { color: #999; font-size: 0.875em; }
+#comments .comment-body { margin: 5px 0 10px; }
+#comments .comment-actions { margin: 0 0 10px; }
+#comments .comment-actions .btn { font-size: 0.875em; height: 28px; line-height: 28px; }
+#comments .children { padding: 20px 0 0 95px; }
+#comments .children li { margin: 0 0 20px; }
+
+
+
+/* 03 HEADER
+-------------------------------------------------------------- */
+
+/* Navigation */
+
+#menu {
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  padding: 0 10px;
+}
+#menu .nav > li a { color: #555; padding: 9px 15px; }
+#menu .nav > li a:hover { color: #006ea8; }
+#menu .nav > li.active > a { background: #ddd; }
+
+/* Dropdown */
+
+#menu .dropdown {
+  -moz-border-radius: 0 0 2px 2px;
+  -webkit-border-radius: 0 0 2px 2px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 2px 2px;
+}
+
+/* 04 HOMEPAGE
+-------------------------------------------------------------- */
+
+
+
+
+/* 05 CONTENT
+-------------------------------------------------------------- */
+
+
+
+
+/* FOOTER
+-------------------------------------------------------------- */
+
+
+
+
+
+
+/*  -----------------------------------------------------------
+
+	Media Queries - Desktop from 1020px to 1160px
+	
+	Column = 60px (* 12) / Gutter = 20px (* 13) => 980px
+
+------------------------------------------------------------ */
+
+@media screen and (max-width: 1160px) {
+	
+	
+	
+}
+
+
+
+/*  -----------------------------------------------------------
+
+	Media Queries - Small desktop (under 1000px) & vertical tablets (768px)
+	
+	Column = 40px (* 12) / Gutter = 15px (* 13) => 675px
+
+------------------------------------------------------------ */
+
+@media screen and (max-width: 1019px) {
+	
+	
+
+}
+
+
+
+/*  -----------------------------------------------------------
+
+	Media Queries - Mobile phones (under 768px)
+	
+	Column = 25px / Gutter = 10px => 430px
+
+------------------------------------------------------------ */
+
+
+@media screen and (max-width: 767px) {
+
+	
+
+}
+
+/*  -----------------------------------------------------------
+
+	Media Queries - Mobile phones (under 480px)
+	
+	Column = 15px / Gutter = 10px => 310px
+
+------------------------------------------------------------ */
+
+@media screen and (max-width: 479px) {
+	
+  
+
+}
+
+

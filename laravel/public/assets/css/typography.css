@@ -1,0 +1,191 @@
+
+/*  ---------------------------------------
+
+    TYPOGRAPHY               
+
+---------------------------------------- */
+
+
+/*  
+    Base font size corresponds to 16px.
+    Here is the em => px conversion table:
+    
+    2.25em    =>  36px
+    2em       =>  32px
+    1.875em   =>  30px
+    1.75em    =>  28px
+    1.625em   =>  26px
+    1.5em     =>  24px
+    1.375em   =>  22px
+    1.25em    =>  20px
+    1.125em   =>  18px
+    
+    1em       =>  16px
+    
+    0.9375em  =>  15px
+    0.875em   =>  14px
+    0.8125em  =>  13px
+    0.75em    =>  12px
+    0.6875em  =>  11px
+    0.625em   =>  10px
+    0.5em     =>  8px
+*/
+
+
+/* General typography settings
+---------------------------------------- */
+
+html {
+  font-size: 100.01%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body {
+  background: #fff;
+  color: #222;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+}
+
+/* Texts
+---------------------------------------- */
+
+/* Headings */
+
+h1,h2,h3,h4,h5,h6 { font-weight: 600; line-height: 1.2em; margin-bottom: 0.5em; }
+
+h1 { font-size: 2.25em  /* 36px */ }
+h2 { font-size: 1.875em /* 30px */ }
+h3 { font-size: 1.5em   /* 24px */ }
+h4 { font-size: 1.125em /* 18px */ }
+h5 { font-size: 0.875em /* 14px */ }
+h6 { font-size: 0.75em  /* 12px */ }
+
+/* Body copy */
+
+p { margin-bottom: 1em; }
+
+/* Links */
+
+a { color: #007dbe; text-decoration: none; }
+a:active,
+a:hover { color: #006ea8; }
+a:focus { outline: 1px dotted #007dbe; }
+
+/* Special spacing */
+
+p + h1,
+p + h2,
+p + h3,
+p + h4,
+p + h5,
+p + h6 { margin-top: 2em; }
+
+li p,
+li ul,
+li ol,
+li li { margin-bottom: 0; margin-top: 0; }
+
+/* Font sizes */
+
+p,
+li,
+td,
+th,
+dt,
+dd { font-size: 0.9375em; }
+
+li p,
+td p,
+th p,
+dt p,
+dd p,
+blockquote p,
+li li { font-size: 1em; }
+
+/* Transitions */
+
+a,
+p,
+h1 a, h2 a, h3 a h4 a,
+a h1, a h2, a h3, a h4 { transition: color 0.2s ease-in-out, background-color 0.3s ease-in-out; }
+
+/* Misc. text elements */
+
+b, strong { font-weight: 700; }
+i, em { font-style: italic; }
+small { font-size: 85%; }
+
+blockquote {
+  border-left: 5px solid #ddd;
+  font-size: 1em;
+  margin: 1.25em 0;
+  padding: 10px 20px;
+}
+blockquote footer:before { content: "— "; }
+blockquote footer { color: #999; font-size: 0.875em; }
+blockquote cite { font-style: italic; }
+
+address { font-style: normal; margin: 1.25em 0; }
+abbr[title] { border-bottom: 1px dotted #999; cursor: help; }
+pre { margin: 1.25em 0; white-space: pre; }
+pre, code, tt { font-family: 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+.help { color: #999; font-size: 0.875em; font-style: italic; }
+
+
+/* Alerts */
+
+.alert {
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  margin: 0 0 20px;
+  padding: 5px 40px;
+  position: relative;
+  text-align: center;
+}
+.alert a { font-weight: 600; }
+
+.alert.info { background: #e0eff7; border-color: #d4ebf6; color: #00679d; }
+.alert.success { background: #edf0d8; border-color: #e3e8c5; color: #72801e; }
+.alert.error { background: #f0dddd; border-color: #ead5d5; color: #b50000; }
+.alert.warning { background: #fbf4dd; border-color: #f9edc7; color: #bf7e00; }
+
+.alert.info a { color: #005684; }
+.alert.success a { color: #5d6a16; }
+.alert.error a { color: #970000; }
+.alert.warning a { color: #a46c00; }
+
+.alert .alert-close {
+  background: transparent;
+  color: inherit;
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 22px;
+  height: 22px;
+  opacity: 0.4;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  transition: opacity 0.2s ease-in-out;
+  right: 10px;
+  width: 22px;
+}
+.alert .alert-close:hover { opacity: 1; }
+
+
+
+/* Lists
+---------------------------------------- */
+
+ul { list-style-type: disc; }
+ol { list-style-type: decimal; }
+ul, ol { margin: 1.25em 0; padding: 0 0 0 1.5em; }
+li { margin: 0 0 0.5em; }
+
+dl { margin: 0 0 1em; }
+dt { float: left; font-weight: 600; margin: 0 0.5em 0 0; }
+dd { margin: 0 0 0.5em; }
+

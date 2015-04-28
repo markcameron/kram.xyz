@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Adds a label in the bottom left corner that displays the current media query state */
+
+body:after { 
+  background-color: #fff;
+  border: 1px solid #333;
+  bottom: -1px;
+  color: #333;
+  content: "Desktop";
+  left: -1px;
+  padding: 0.5em 1em;
+  position: fixed;
+  text-align: center;
+  z-index: 99;
+}
+
+
+/*  -----------------------------------------------------------
+
+  Media Queries - Desktop from 1020px to 1160px
+  
+  Column = 60px (* 12) / Gutter = 20px (* 13) => 980px
+
+------------------------------------------------------------ */
+
+@media screen and (max-width: 1160px) {
+
+  body:after { 
+    content: "Horizontal tablet";
+  }
+
+}
+
+
+/*  -----------------------------------------------------------
+
+  Media Queries - Small desktop (under 1000px) & vertical tablets (768px)
+  
+  Column = 40px (* 12) / Gutter = 15px (* 13) => 675px
+
+------------------------------------------------------------ */
+
+@media screen and (max-width: 1019px) {
+
+  body:after { 
+    content: "Vertical tablet";
+  }
+
+}
+
+
+/*  -----------------------------------------------------------
+
+  Media Queries - Mobile phones (under 768px)
+  
+  Column = 25px / Gutter = 10px => 430px
+
+------------------------------------------------------------ */
+
+
+@media screen and (max-width: 767px) {
+
+  body:after { 
+    content: "Horizontal mobile";
+  }
+
+}
+
+
+/*  -----------------------------------------------------------
+
+  Media Queries - Mobile phones (under 480px)
+  
+  Column = 15px / Gutter = 10px => 310px
+
+------------------------------------------------------------ */
+
+@media screen and (max-width: 479px) {
+
+  body:after { 
+    content: "Vertical mobile";
+  }
+
+}
