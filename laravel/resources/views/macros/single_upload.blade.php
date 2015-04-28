@@ -1,7 +1,7 @@
 <div class="form-group">
 
   {!! Form::label($name, $label, array('class' => 'control-label')) !!}
-  <div class="image-upload"{{ is_null($file) ? '' : ' style="display:none;"' }}>
+  <div class="image-upload"{!! is_null($file) ? '' : ' style="display:none;"' !!}>
     {!! Form::file($name) !!}
     {!! $errors->has($name) ? Form::label('error', $errors->first($name), array('class' => 'control-label')) : '' !!}
     {{ $errors->has($name) ? '<span class="glyphicon glyphicon-remove form-control-feedback"></span>' : '' }}
@@ -11,7 +11,7 @@
     <div class="row image-display" data-id="{{ $file->id }}" data-scope="{{ $type }}" data-model-id="{{ is_null($model) ? '' : $model->id }}" data-model-name="{{ $model_name }}">
       <div class="col-xs-2">
         @if ($image = Imagecache::get($file, '80x80'))
-          {{ $image->img_nosize }}
+          {!! $image->img_nosize !!}
         @endif
       </div>
       <div class="col-xs-8">
