@@ -1,50 +1,26 @@
-@extends('app')
+@extends('front')
 
 @section('content')
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Reset Password</div>
-				<div class="panel-body">
-					@if (session('status'))
-						<div class="alert alert-success">
-							{{ session('status') }}
-						</div>
-					@endif
 
-					@if (count($errors) > 0)
-						<div class="alert alert-danger">
-							<strong>Whoops!</strong> There were some problems with your input.<br><br>
-							<ul>
-								@foreach ($errors->all() as $error)
-									<li>{{ $error }}</li>
-								@endforeach
-							</ul>
-						</div>
-					@endif
+  <section class="forgot-password clearfix col6 contentcenter">
 
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/password/email') }}">
-						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <div class="page-header">
+      <h3>{{ trans('auth.lost_password') }}</h3>
+    </div>
 
-						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
-							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
-							</div>
-						</div>
+    {!! Form::open(['url' => '/password/email']) !!}
 
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Send Password Reset Link
-								</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
+    <!-- Email -->
+    <div class="form-item {{ $errors->has('email') ? 'has-error' : ''}}">
+      {!! Form::label('email', 'E-mail') !!}
+      {!! Form::email('email', '', array('class' => $errors->first('email', 'error'))) !!}
+      {!! $errors->has('email') ? '<p class="error">' . $errors->first('email') .'</p>' : '' !!}
+    </div>
+
+    <button type="submit" class="btn">{{ trans('auth.lost_password.validate') }}</button>
+
+    {!! Form::close() !!}
+
+  </section>
+
 @endsection
