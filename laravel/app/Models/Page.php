@@ -2,10 +2,17 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
+use Dimsav\Translatable\Translatable;
+use App\Libs\TranslatableSluggableTrait;
+use Devfactory\Media\MediaTrait;
 
 class Page extends Model {
 
-  use \Dimsav\Translatable\Translatable;
+  use MediaTrait;
+  use Translatable;
+  use TranslatableSluggableTrait;
 
   public $translatedAttributes = [
     'title',
@@ -30,7 +37,13 @@ class Page extends Model {
 
 }
 
-class PageTranslation extends Model {
+class PageTranslation extends Model implements SluggableInterface {
+
+  use SluggableTrait;
+
+  protected $sluggable = [
+    'build_from' => 'title',
+  ];
 
   public $timestamps = FALSE;
 
