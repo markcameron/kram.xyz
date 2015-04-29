@@ -4,7 +4,8 @@
 
 return  array(
 	'lost_password'   =>  array(
-		'validate'        => 'Forgot password, validate',
+    'header' => 'Request new password',
+		'validate'        => 'Send',
 	),
 	'password'        => 'Password',
 );

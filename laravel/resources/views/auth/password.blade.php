@@ -5,7 +5,7 @@
   <section class="forgot-password clearfix col6 contentcenter">
 
     <div class="page-header">
-      <h3>{{ trans('auth.lost_password') }}</h3>
+      <h3>{{ trans('auth.lost_password.header') }}</h3>
     </div>
 
     {!! Form::open(['url' => '/password/email']) !!}

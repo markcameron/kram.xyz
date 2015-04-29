@@ -31,4 +31,24 @@ return array(
     'value' => 'no',
     'translation_key' => 'variables.rollbar_debug',
   ),
+  'email_color_background' => array(
+    'value' => '#0091ce',
+    'translation_key' => 'variables.email_color_background',
+  ),
+  'email_color_link' => array(
+    'value' => '#0091ce',
+    'translation_key' => 'variables.email_color_link',
+  ),
+  'email_logo_path' => array(
+    'value' => 'http://support.devfactory.ch/assets/custom/img/logo-rouages-new-28x28.jpg',
+    'translation_key' => 'variables.email_logo_path',
+  ),
+  'email_logo_url' => array(
+    'value' => 'http://www.devfactory.ch',
+    'translation_key' => 'variables.email_logo_url',
+  ),
+  'email_footer' => array(
+    'value' => 'DevFactory Sarl, Av. Louis Ruchonnet 2, CH-1003 Lausanne',
+    'translation_key' => 'variables.email_footer',
+  ),
 );
