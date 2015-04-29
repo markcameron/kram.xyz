@@ -28,7 +28,7 @@ class UserTableSeeder extends Seeder {
         'first_name' => 'Admin',
         'last_name' => 'Account',
         'email' => 'admin@example.com',
-        'password' => 'admin',
+        'password' => bcrypt('admin'),
       ]
     );
 
@@ -39,7 +39,7 @@ class UserTableSeeder extends Seeder {
         'first_name' => 'User',
         'last_name' => 'Account',
         'email' => 'user@example.com',
-        'password' => 'user',
+        'password' => bcrypt('user'),
       ]
     );
 
