@@ -20,6 +20,10 @@ class Admin {
    * @return
    */
   public static function handleFileUpload($name, $model, $type) {
+    if (!method_exists($model, 'getMedio')) {
+      return;
+    }
+
     if (!Input::get('old_file_'. $name)) {
       $file = $model->getMedia($type);
       if (!$file->isEmpty()) {
