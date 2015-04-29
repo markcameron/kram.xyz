@@ -1,29 +1,18 @@
-<?php
-namespace {{namespace}};
+<?php namespace {{namespace}};
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 
-use Titan\Models\Traits\ModifyBy;
-use Titan\Models\Traits\LogsActivity;
-
-class {{class}} extends Model
-{
-	use LogsActivity, ModifyBy, SoftDeletes;
-
-	protected $table = '{{table}}';
-
-	protected $guarded = ['id'];
+class {{class}} extends Model {
 
 	/**
-     * Validation rules for this model
-     */
-    static public $rules = [
-        'title' => 'required|min:3:max:255',
-    ];
-
-	/**
-	 * Validation custom messages for this model
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
 	 */
-	static public $messages = [];
+	protected $fillable = [
+  ];
+
+  public $rules = [
+  ];
+
 }

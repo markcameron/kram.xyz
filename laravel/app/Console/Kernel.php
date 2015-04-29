@@ -12,6 +12,10 @@ class Kernel extends ConsoleKernel {
 	 */
 	protected $commands = [
 		'App\Console\Commands\Inspire',
+    'App\Commands\AdminResourceCommand',
+    'App\Commands\ViewCreateCommand',
+    'App\Commands\ViewEditCommand',
+    'App\Commands\ViewFormCommand',
 	];
 
 	/**

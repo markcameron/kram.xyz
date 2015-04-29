@@ -38,4 +38,11 @@ return [
 	'view_add_edit_stub'    => base_path() . '/resources/stubs/view.add_edit.stub',
 
 	'view_show_stub'        => base_path() . '/resources/stubs/view.show.stub',
+
+	'view_create_stub'      => base_path() . '/resources/stubs/view.create.stub',
+
+	'view_edit_stub'        => base_path() . '/resources/stubs/view.edit.stub',
+
+	'view_form_stub'        => base_path() . '/resources/stubs/view.form.stub',
+
 ];
