@@ -16,11 +16,11 @@ class RedirectIfNotAdmin {
 	public function handle($request, Closure $next)
 	{
     if (!\Auth::check()) {
-      return redirect('home');
+      return redirect()->route('home');
     }
 
     if (!$request->user()->hasRole('admin')) {
-      return redirect('home');
+      return redirect()->route('home');
     }
 
 		return $next($request);
