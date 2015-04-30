@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="Application Test Suite" tests="28" assertions="99" failures="0" errors="0" time="103.231606">
+    <testsuite name="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" tests="14" assertions="49" failures="0" errors="0" time="43.813467">
+      <testcase name="testAccessAdminGroupIndexAsGuest" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="22" assertions="1" time="4.953441"/>
+      <testcase name="testAccessAdminGroupIndexAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="38" assertions="8" time="1.576544"/>
+      <testcase name="testAdminGroupCreateAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="69" assertions="7" time="1.987347"/>
+      <testcase name="testAdminGroupCreateAlreadyExistAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="108" assertions="3" time="2.299877"/>
+      <testcase name="testAdminGroupCreateEmptyNameAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="139" assertions="4" time="2.721018"/>
+      <testcase name="testAdminGroupCreateNameLenghtAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="170" assertions="4" time="3.201256"/>
+      <testcase name="testAdminGroupUpdateDontExistsAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="201" assertions="3" time="1.607297"/>
+      <testcase name="testAdminGroupEditAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="228" assertions="4" time="3.876843"/>
+      <testcase name="testAdminGroupEditAlreadyExistsAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="264" assertions="3" time="4.289281"/>
+      <testcase name="testAdminGroupEditEmptyGroupAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="295" assertions="4" time="5.347887"/>
+      <testcase name="testAdminGroupEditUnableAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="326" assertions="3" time="5.544821"/>
+      <testcase name="testAdminGroupEditNotFoundAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="380" assertions="3" time="3.861851"/>
+      <testcase name="testAdminGroupDeleteAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="400" assertions="1" time="1.293569"/>
+      <testcase name="testAdminGroupDeleteUserNonExistAsAdmin" class="ComponentGroupsTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentGroupsTest.php" line="416" assertions="1" time="1.252435"/>
+    </testsuite>
+    <testsuite name="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" tests="13" assertions="49" failures="0" errors="0" time="58.201850">
+      <testcase name="testBasicUserTypes" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="20" assertions="3" time="1.133308"/>
+      <testcase name="testAccessAdminUserIndexAsGuest" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="39" assertions="1" time="1.318666"/>
+      <testcase name="testAccessAdminUserIndexAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="58" assertions="8" time="3.695280"/>
+      <testcase name="testAdminUserCreateAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="89" assertions="7" time="6.566135"/>
+      <testcase name="testAdminUserCreateAlreadyExistAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="134" assertions="7" time="6.708208"/>
+      <testcase name="testAdminUserEditAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="172" assertions="4" time="7.545632"/>
+      <testcase name="testAdminUserUpdateAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="213" assertions="4" time="8.027739"/>
+      <testcase name="testAdminUserUpdateUserDontExistsAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="252" assertions="3" time="4.859432"/>
+      <testcase name="testAdminUserUpdateErrorSavingAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="272" assertions="3" time="1.254770"/>
+      <testcase name="testAdminUserUpdateExistingMailAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="317" assertions="4" time="8.642059"/>
+      <testcase name="testAdminUserEditUserDontExistsAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="351" assertions="3" time="5.701715"/>
+      <testcase name="testAdminUserDeleteAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="371" assertions="1" time="1.484404"/>
+      <testcase name="testAdminUserDeleteUserNonExistAsAdmin" class="ComponentUserTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ComponentUserTest.php" line="387" assertions="1" time="1.264502"/>
+    </testsuite>
+    <testsuite name="ExampleTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ExampleTest.php" tests="1" assertions="1" failures="0" errors="0" time="1.216289">
+      <testcase name="testBasicExample" class="ExampleTest" file="C:\wamp\www\laravel-fork-me\laravel\app\tests\ExampleTest.php" line="10" assertions="1" time="1.216289"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
