@@ -20,7 +20,7 @@ class Admin {
    * @return
    */
   public static function handleFileUpload($name, $model, $type) {
-    if (!method_exists($model, 'getMedio')) {
+    if (!method_exists($model, 'getMedia')) {
       return;
     }
 
