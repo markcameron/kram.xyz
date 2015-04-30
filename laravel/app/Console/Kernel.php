@@ -16,6 +16,7 @@ class Kernel extends ConsoleKernel {
     'App\Commands\ViewCreateCommand',
     'App\Commands\ViewEditCommand',
     'App\Commands\ViewFormCommand',
+    'App\Console\Commands\AppInstallCommand',
 	];
 
 	/**
