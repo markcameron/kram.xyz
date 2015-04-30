@@ -15,9 +15,9 @@ class {{class}} extends ResourcesController {
     parent::__construct();
 
     $this->setModel(new {{model}}());
-    $this->setViewPath('admin.{{resource}}s');
+    $this->setViewPath('admin.{{collection}}');
     $this->setResource('{{resource}}');
-    $this->setResources('{{resource}}s');
+    $this->setResources('{{collection}}');
   }
 
 }
