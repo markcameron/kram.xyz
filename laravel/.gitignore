@@ -2,8 +2,14 @@
 /node_modules
 .env
 composer.lock
+
+# OS files
 .DS_Store
 Thumbs.db
+
+# Project files
 public/builds
 public/uploads
 public/files
+build/coverage
+build/junit.xml
