@@ -16,7 +16,9 @@ fi
 cd $cwd/..
 
 # Run the tests
-export LARAVEL_ENV=testing
+export APP_ENV=testing
+export DB_NAME=testing_stark
+
 php artisan migrate:reset
 
 if [ "$cover" == "cover" ]
