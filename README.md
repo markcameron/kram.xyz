@@ -6,7 +6,7 @@ This repo is to be forked into a new project when starting a new Laravel 5 proje
 
 ## Information ##
 
-* Laravel Version: **5.0**
+* Laravel Version: **5.1**
 
 ## Requirements ##
 
