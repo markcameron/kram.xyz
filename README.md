@@ -1,6 +1,6 @@
 # Stark #
 
-## Laravel 5 with Sentry and AdminLTE Theme ##
+## Laravel 5 with AdminLTE Theme ##
 
 This repo is to be forked into a new project when starting a new Laravel 5 project. Only makes changes to this repository if updating base code for future forks
 
