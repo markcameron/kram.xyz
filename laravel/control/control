@@ -1,0 +1,8 @@
+Package: stark
+Version: 1.0-SNAPSHOT
+Section: main
+Priority: optional
+Architecture: all
+Maintainer: Alcindo Da Costa <alcindo.dacosta@gmail.com>
+Description: Laravel website
+Distribution: wheezy

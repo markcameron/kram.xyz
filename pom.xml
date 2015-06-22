@@ -1,0 +1,169 @@
+<?xml version="1.0" ?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>ch.devfactory.stark.webapp</groupId>
+  <artifactId>stark-webapp-package</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>stark</name>
+
+  <properties>
+    <laravel.project.name>stark</laravel.project.name>
+    <deb.base.dir>/home/www-prod/${laravel.project.name}</deb.base.dir>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>com.google.code.maven-replacer-plugin</groupId>
+        <artifactId>maven-replacer-plugin</artifactId>
+        <version>1.4.0</version>
+        <executions>
+          <execution>
+            <phase>process-sources</phase>
+            <goals>
+              <goal>replace</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <includes>
+	    <include>laravel/control/control</include>
+	  </includes>
+          <replacements>
+            <replacement>
+              <token>@name@</token>
+              <value>${project.name}</value>
+            </replacement>
+            <replacement>
+              <token>@laravelname@</token>
+              <value>${laravel.project.name}</value>
+            </replacement>
+            <replacement>
+              <token>@version@</token>
+              <value>${project.version}</value>
+            </replacement>
+          </replacements>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>exec-maven-plugin</artifactId>
+        <groupId>org.codehaus.mojo</groupId>
+        <version>1.2.1</version>
+        <executions>
+	  <execution>
+            <id>composer-webapp</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>${basedir}/laravel/build/composer.sh</executable>
+            </configuration>
+          </execution>
+          <execution>
+            <id>test-webapp</id>
+            <phase>test</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>${basedir}/laravel/build/test.sh</executable>
+            </configuration>
+          </execution>
+	  <execution>
+            <id>apigen-webapp</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+            <configuration>
+              <executable>${basedir}/laravel/build/apigen.sh</executable>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <artifactId>jdeb</artifactId>
+        <groupId>org.vafer</groupId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jdeb</goal>
+            </goals>
+            <configuration>
+
+              <verbose>true</verbose>
+              <controlDir>${basedir}/laravel/control</controlDir>
+
+              <dataSet>
+
+		<data>
+                  <src>${project.basedir}/laravel</src>
+                  <type>directory</type>
+		  <excludes>**/.git*,build/</excludes>
+                  <mapper>
+                    <type>perm</type>
+                    <prefix>${deb.base.dir}/lib</prefix>
+                    <user>www-data</user>
+                    <group>www-data</group>
+                  </mapper>
+                </data>
+
+		<data>
+                  <src>${project.basedir}/versions</src>
+                  <type>directory</type>
+                  <mapper>
+                    <type>perm</type>
+                    <prefix>${deb.base.dir}/lib/version</prefix>
+                    <user>www-data</user>
+                    <group>www-data</group>
+                  </mapper>
+                </data>
+
+		<data>
+                  <src>${project.basedir}/laravel/build</src>
+                  <type>directory</type>
+                  <includes>deploy.sh</includes>
+                  <mapper>
+                    <type>perm</type>
+                    <prefix>${deb.base.dir}/lib/build</prefix>
+                    <user>www-data</user>
+                    <group>www-data</group>
+		    <filemode>775</filemode>
+                  </mapper>
+                </data>
+
+		<data>
+                  <src>${project.basedir}/laravel/resources</src>
+                  <type>directory</type>
+                  <mapper>
+                    <type>perm</type>
+                    <prefix>${deb.base.dir}/lib/resources</prefix>
+                    <user>www-data</user>
+                    <group>www-data</group>
+		    <filemode>775</filemode>
+                    <dirmode>775</dirmode>
+                  </mapper>
+                </data>
+
+    		<data>
+                  <type>link</type>
+                  <symlink>true</symlink>
+                  <linkName>${deb.base.dir}/bin/deploy.sh</linkName>
+                  <linkTarget>${deb.base.dir}/lib/build/deploy.sh</linkTarget>
+                </data>
+
+              </dataSet>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+  </build>
+</project>
