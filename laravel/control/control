@@ -1,5 +1,5 @@
-Package: stark
-Version: 1.0-SNAPSHOT
+Package: @name@
+Version: @version@
 Section: main
 Priority: optional
 Architecture: all
