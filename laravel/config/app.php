@@ -163,6 +163,7 @@ return [
     'Dimsav\Translatable\TranslatableServiceProvider',
     'Intervention\Image\ImageServiceProvider',
     'Devfactory\Imagecache\ImagecacheServiceProvider',
+    'Devfactory\Version\VersionServiceProvider',
 
     // Leave it after HtmlServiceProvider !!!
     'App\Providers\MacroServiceProvider',
@@ -217,6 +218,7 @@ return [
     // Custom/Vendor
     'Minify'    => 'Devfactory\Minify\Facades\MinifyFacade',
     'Variables' => 'Devfactory\Variables\Facades\VariablesFacade',
+    'Version'   => 'Devfactory\Version\VersionFacadeProvider',
     'Form'      => 'Illuminate\Html\FormFacade',
     'HTML'      => 'Illuminate\Html\HtmlFacade',
     'Menu'      => 'Menu\Menu',

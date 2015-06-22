@@ -11,6 +11,7 @@
     "devfactory/media": "2.0.*",
     "devfactory/minify": "1.0.*",
     "devfactory/variables": "2.0.*",
+    "devfactory/version": "2.0.*",
     "jenssegers/rollbar": "dev-master",
     "vespakoen/menu": "3.*",
     "bpocallaghan/generators": "1.0.*",

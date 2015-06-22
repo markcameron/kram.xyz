@@ -7,7 +7,7 @@
     <h1>Home</h1>
 
     <p>This will be content. Needed to see logout button =(</p>
-
+    {!! Version::get() !!}
   </section>
 
 @endsection
