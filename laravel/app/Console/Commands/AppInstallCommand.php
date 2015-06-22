@@ -46,11 +46,11 @@ class AppInstallCommand extends Command {
 
     // Run the Migrations
     $this->info('Running database migrations...');
-    $this->call('migrate');
+    $this->call('migrate', ['--force' => true]);
 
     // DB seeding
     $this->info('Seeding the database...');
-    $this->call('db:seed');
+    $this->call('db:seed', ['--force' => true]);
 
     $this->info('Installation complete!');
   }
