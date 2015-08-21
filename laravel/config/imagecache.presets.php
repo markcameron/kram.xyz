@@ -27,5 +27,10 @@ return array(
     'height' => 80,
     'method' => 'crop',
   ),
+  '90x90' => array(
+    'width' => 90,
+    'height' => 90,
+    'method' => 'crop',
+  ),
 
 );
