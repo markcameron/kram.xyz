@@ -23,23 +23,27 @@ Route::controllers([
 
 Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
 
+  Route::controller('ajax', '\App\Http\Controllers\Admin\AjaxController', [
+    'postDropzoneDelete' => 'admin.dropzone_delete',
+  ]);
+
   Route::resource('users', '\App\Http\Controllers\Admin\UsersController');
   Route::resource('roles', '\App\Http\Controllers\Admin\RolesController');
   Route::resource('pages', '\App\Http\Controllers\Admin\PagesController');
 
   Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
 
-  // AdminController
-  Route::controller('/', '\App\Http\Controllers\Admin\AdminController', [
-    'getIndex' => 'admin',
-    'getChangeStatus' => 'admin.change.status',
-  ]);
-
   // Macros
   Route::controller('macros', '\App\Http\Controllers\Admin\MacrosController');
 
   // Contrib/Packages
   Route::controller('variables', '\Devfactory\Variables\Controllers\VariablesController');
+
+  // AdminController
+  Route::controller('/', '\App\Http\Controllers\Admin\AdminController', [
+    'getIndex' => 'admin',
+    'getChangeStatus' => 'admin.change.status',
+  ]);
 
 });
 
