@@ -29,7 +29,12 @@ class AdminMenu {
 
     Menu::handler('admin')
       ->getItemListsAtDepth(1)
-      ->addClass('treeview-menu');
+      ->addClass('treeview-menu')
+      ->map(function($item) {
+        if ($item->isActive()) {
+          $item->addClass('menu-open');
+        }
+      });
 
     return $next($request);
   }

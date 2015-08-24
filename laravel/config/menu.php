@@ -16,7 +16,7 @@
 
     // Various classes to mark active items or children
     'active_class'       => 'active',
-    'active_child_class' => 'active-child',
+    'active_child_class' => 'active',
   ),
 
   // ItemLists ----------------------------------------------------- /
