@@ -114,4 +114,8 @@ return [
 
 	'view_form_stub'        => base_path() . '/resources/stubs/view.form.stub',
 
+	'schema_create_stub'    => base_path() . '/resources/stubs/schema-create.stub',
+
+	'schema_change_stub'    => base_path() . '/resources/stubs/schema-change.stub',
+
 ];

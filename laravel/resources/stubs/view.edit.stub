@@ -18,7 +18,7 @@
 
         {!! Form::model(${{resource}}, array('method' => 'PUT', 'route' => array('admin.{{collection}}.update', ${{resource}}->id), 'files' => TRUE)) !!}
 
-        @include('admin.{{collection}}.partials.form')
+        @include('admin.{{collection}}.form')
 
         <div class="box-footer">
           {!! Form::submit(trans('buttons.save'), array('class' => 'btn btn-primary btn-flat')) !!}
@@ -29,39 +29,6 @@
       </div>
 
     </div>
-
-  </div>
-
-@stop
-
-
-@extends('admin')
-
-@section('header')
-  <h1>{{ trans('{{collection}}.create.header') }}</h1>
-@stop
-
-@section('content')
-
-  <div class="row">
-
-    {!! Form::open(array('method' => 'POST', 'route' => array('admin.{{collection}}.store'), 'files' => TRUE)) !!}
-
-    <div class="col-md-8">
-
-      <div class="box box-primary">
-
-        @include('admin.{{collection}}.partials.form')
-
-        <div class="box-footer">
-          {!! Form::submit(trans('buttons.add'), array('class' => 'btn btn-primary btn-flat')) !!}
-        </div>
-
-      </div>
-
-    </div>
-
-    {!! Form::close() !!}
 
   </div>
 

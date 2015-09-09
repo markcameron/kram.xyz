@@ -14,7 +14,7 @@
 
       <div class="box box-primary">
 
-        @include('admin.{{collection}}.partials.form')
+        @include('admin.{{collection}}.form')
 
         <div class="box-footer">
           {!! Form::submit(trans('buttons.add'), array('class' => 'btn btn-primary btn-flat')) !!}
