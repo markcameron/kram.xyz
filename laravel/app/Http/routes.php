@@ -27,6 +27,7 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'admin'), function() {
     'postDropzoneDelete' => 'admin.dropzone_delete',
   ]);
 
+  Route::resource('requests', 'Admin\LogsController');
   Route::resource('users', '\App\Http\Controllers\Admin\UsersController');
   Route::resource('roles', '\App\Http\Controllers\Admin\RolesController');
   Route::resource('pages', '\App\Http\Controllers\Admin\PagesController');
