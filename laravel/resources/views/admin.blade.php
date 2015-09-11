@@ -24,6 +24,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     '/assets/vendor/adminlte/dist/css/skins/skin-purple.min.css',
     '/assets/vendor/adminlte/plugins/datepicker/datepicker3.css',
     '/assets/vendor/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css',
+    '/assets/vendor/css/bootstrap-dialog.css',
     '/assets/custom/css/admin/macro-multi-upload.css',
     )) !!}
 
@@ -162,6 +163,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     '/assets/vendor/adminlte/plugins/datepicker/bootstrap-datepicker.js',
     '/assets/vendor/adminlte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js',
     '/assets/vendor/js/dropzone.min.js',
+    '/assets/vendor/js/bootstrap-dialog.js',
     '/assets/custom/js/adminlte.js',
     '/assets/custom/js/admin/macro-single-upload.js',
     )) !!}
