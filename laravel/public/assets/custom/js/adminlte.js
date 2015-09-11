@@ -31,4 +31,37 @@ $(function() {
     });
   });
 
+  // Display a popup to confirm the delete of an element
+  $('.delete-confirm-dialog').on('click', function(e){
+    e.preventDefault();
+    var delete_url = $(this).parent().attr('action');
+
+    BootstrapDialog.show({
+      type: BootstrapDialog.TYPE_DANGER,
+      title: "Confirm delete.",
+      message: 'Are you sure you want to delete this? The operation cannot be reversed.',
+      buttons: [{
+        label: 'Cancel',
+        action: function(dialogItself) {
+          dialogItself.close();
+        },
+      }, {
+        label: 'DELETE',
+        cssClass: 'btn-primary',
+        action: function(dialogItself) {
+          $.ajax({
+            url: delete_url,
+            type: "DELETE",
+            headers: {
+              'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
+            },
+            success: function(result){
+              location.reload();
+            }
+          });
+        },
+      }]
+    });
+  });
+
 });
