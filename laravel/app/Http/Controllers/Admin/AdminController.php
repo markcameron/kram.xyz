@@ -12,7 +12,7 @@ class AdminController extends Controller {
   }
 
   public function getIndex() {
-    return view('admin.dashboard');
+    return redirect(route('admin.requests.index'));
   }
 
   /**

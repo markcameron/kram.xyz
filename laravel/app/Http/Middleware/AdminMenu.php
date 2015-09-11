@@ -72,9 +72,9 @@ class AdminMenu {
     return array(
 
       array(
-        'url' => route('admin'),
-        'text' => trans('menus.admin.dashboard'),
-        'icon' => 'dashboard',
+        'url' => route('admin.requests.index'),
+        'text' => trans('menus.admin.requests'),
+        'icon' => 'list',
         'children' => array(
         ),
       ),

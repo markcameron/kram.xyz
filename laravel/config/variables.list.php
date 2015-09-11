@@ -20,7 +20,7 @@
 
 return array(
   'site_name' => array(
-    'value' => 'Stark',
+    'value' => 'KRAM.XYZ',
     'translation_key' => 'variables.site_name',
   ),
   'items_per_page' => array(
