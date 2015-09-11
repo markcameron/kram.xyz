@@ -14,7 +14,7 @@
     "devfactory/version": "2.0.*",
     "jenssegers/rollbar": "dev-master",
     "vespakoen/menu": "3.*",
-    "bpocallaghan/generators": "1.0.*",
+    "bpocallaghan/generators": "~2.0",
     "zizaco/entrust": "dev-laravel-5",
     "philo/laravel-translate": "~2.0",
     "rap2hpoutre/laravel-log-viewer": "0.2.*",
