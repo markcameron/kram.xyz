@@ -1,4 +1,4 @@
-# Stark #
+# Kram.xyz #
 
 ## Laravel 5 with AdminLTE Theme ##
 
