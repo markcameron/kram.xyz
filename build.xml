@@ -151,13 +151,13 @@
     </target>
     <target name="clean-composer" description="Cleanup composer artifacts">
         <echo>Cleaning out the composer artifacts</echo>
-        <delete dir="${basedir}/vendor" />
-        <delete file="${basedir}/composer.lock" />
+        <delete dir="${basedir}/laravel/vendor" />
+        <delete file="${basedir}/laravel/composer.lock" />
     </target>
     <target name="composer" depends="composer-update" description="Install or update dependencies" />
     <target name="composer-update" description="Updating dependencies">
         <echo>Installing/Updating Composer dependencies</echo>
-        <exec executable="composer" failonerror="true">
+        <exec executable="composer" dir="${basedir}/laravel" failonerror="true">
             <arg value="update" />
             <arg value="--no-scripts" />
         </exec>
