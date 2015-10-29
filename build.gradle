@@ -1,4 +1,13 @@
+task deploy(dependsOn:[composer, phpunit]) {
+
+}
+
 task composer(type:Exec) {
   workingDir './laravel'
   commandLine 'composer', 'update'
+}
+
+task phpunit(type:Exec) {
+  workingDir './laravel'
+  commandLine 'phpunit'
 }
