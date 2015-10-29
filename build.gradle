@@ -6,7 +6,7 @@ task composer(type:Exec) {
 task phpunit(type:Exec) {
   workingDir './laravel'
   commandLine 'phpunit'
-  args '--coverage-html', './build/coverage'
+  args '--coverage-html', '../build/coverage'
 }
 
 task deploy(dependsOn:[composer, phpunit]) {
