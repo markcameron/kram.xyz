@@ -23,7 +23,6 @@
   <filter>
     <whitelist processUncoveredFilesFromWhitelist="true">
       <directory suffix=".php">./app</directory>
-      <file>./app</file>
     </whitelist>
   </filter>
 </phpunit>
