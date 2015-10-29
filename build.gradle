@@ -1,29 +1,4 @@
-buildscript {
-    repositories {
-        maven {
-            url uri('../repo')
-        }
-    }
-    dependencies {
-        classpath group: 'org.swissphpfriends',
-                name: 'php-build-plugin',
-                version: '0.1-SNAPSHOT'
-    }
-}
-
-apply plugin: 'php-build'
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '2.8'
-}
-
-task install(type: org.swissphpfriends.gradle.task.ComposerInstall) {
-    workingDirectory = "./laravel"
-    doNotUpdatePhar = true
-}
-
-task test(type: org.swissphpfriends.gradle.task.PhpUnit) {
-    path = './laravel/tests/'
-    verbose = true
-    outputTap = true
+task composer(type:Exec) {
+  workingDir './laravel'
+  commandLine 'composer', 'update'
 }
