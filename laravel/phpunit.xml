@@ -21,8 +21,8 @@
     <env name="QUEUE_DRIVER" value="sync"/>
   </php>
   <filter>
-    <whitelist processUncoveredFilesFromWhitelist="true">
-      <directory suffix=".php">./app</directory>
-    </whitelist>
+    <blacklist>
+      <directory suffix=".php">./vendor</directory>
+    </blacklist>
   </filter>
 </phpunit>
