@@ -23,6 +23,9 @@
   <filter>
     <blacklist>
       <directory suffix=".php">./vendor</directory>
+      <directory suffix=".php">./bootstrap</directory>
+      <directory suffix=".php">./config</directory>
+      <directory suffix=".php">./resources</directory>
     </blacklist>
   </filter>
 </phpunit>
