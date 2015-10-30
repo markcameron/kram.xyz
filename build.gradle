@@ -23,7 +23,7 @@ apply plugin: 'pkg-debian'
 
 debian {
   packagename = "kram"
-  publications = ['webapp']
+//  publications = ['webapp']
   controlDirectory = "./build/debian/control"
 
   data {
@@ -37,6 +37,7 @@ debian {
 task composer(type:Exec) {
   workingDir './laravel'
   commandLine 'composer', 'update'
+
 }
 
 task phpunit(type:Exec) {
