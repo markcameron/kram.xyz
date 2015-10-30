@@ -1,3 +1,39 @@
+buildscript {
+  repositories {
+    maven {
+      url "http://dl.bintray.com/gesellix/gradle-plugins"
+    }
+    mavenCentral()
+    mavenLocal()
+  }
+  dependencies {
+    classpath "de.gesellix:gradle-debian-plugin:16"
+  }
+}
+
+publishing {
+  publications {
+    webapp(MavenPublication) {
+      from components.web  // .war
+    }
+  }
+}
+
+apply plugin: 'pkg-debian'
+
+debian {
+  packagename = "kram"
+  publications = ['webapp']
+  controlDirectory = "./build/debian/control"
+
+  data {
+    def baseDir = "/var/www/"
+    dir {
+      name = baseDir
+    }
+  }
+}
+
 task composer(type:Exec) {
   workingDir './laravel'
   commandLine 'composer', 'update'
