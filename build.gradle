@@ -20,6 +20,7 @@ task phpunit(type:Exec) {
 task phpdpkg(type:Exec) {
   workingDir '.'
   commandLine 'phpdpkg'
+  args '--build_number=' + buildNumber
 }
 
 task deploy(dependsOn:[build_number, composer, phpunit, phpdpkg]) {
