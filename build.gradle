@@ -1,5 +1,7 @@
-buildNumber = System.getenv('BUILD_NUMBER')
-println buildNumber
+task build_number << {
+  buildNumber = System.getenv('BUILD_NUMBER')
+  println buildNumber
+}
 
 task composer(type:Exec) {
   workingDir './laravel'
@@ -17,5 +19,5 @@ task phpdpkg(type:Exec) {
   commandLine 'phpdpkg'
 }
 
-task deploy(dependsOn:[composer, phpunit, phpdpkg]) {
+task deploy(dependsOn:[build_number, composer, phpunit, phpdpkg]) {
 }
