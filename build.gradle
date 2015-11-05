@@ -1,5 +1,5 @@
-build_number = "$System.env.BUILD_NUMBER"
-println build_number
+buildNumber = System.getenv('BUILD_NUMBER')
+println buildNumber
 
 task composer(type:Exec) {
   workingDir './laravel'
