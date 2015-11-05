@@ -2,10 +2,6 @@ ext {
   buildNumber = System.getenv('BUILD_NUMBER')
 }
 
-task build_number << {
-  println buildNumber
-}
-
 task composer(type:Exec) {
   workingDir './laravel'
   commandLine 'composer', 'update'
