@@ -1,3 +1,6 @@
+build_number = "$System.env.BUILD_NUMBER"
+println build_number
+
 task composer(type:Exec) {
   workingDir './laravel'
   commandLine 'composer', 'update'
@@ -15,5 +18,4 @@ task phpdpkg(type:Exec) {
 }
 
 task deploy(dependsOn:[composer, phpunit, phpdpkg]) {
-
 }
