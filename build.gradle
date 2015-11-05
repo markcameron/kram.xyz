@@ -1,5 +1,8 @@
-task build_number << {
+ext {
   buildNumber = System.getenv('BUILD_NUMBER')
+}
+
+task build_number << {
   println buildNumber
 }
 
