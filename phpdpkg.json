@@ -4,7 +4,7 @@
   "build_directory": "target",
   "package_base_directory": "/var/www/kram",
   "copy_contents_of": [
-    "kram.xyz/laravel"
+    "laravel"
   ],
   "copy_directories": [
   ],
