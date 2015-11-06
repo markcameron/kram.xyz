@@ -19,5 +19,5 @@ task phpdpkg(type:Exec) {
   args '--build_number=' + buildNumber
 }
 
-task deploy(dependsOn:[build_number, composer, phpunit, phpdpkg]) {
+task deploy(dependsOn:[composer, phpunit, phpdpkg]) {
 }
